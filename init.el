@@ -15,12 +15,16 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(key-chord
+(defvar my-packages '(color-theme-railscasts
+		      magit
+		      key-chord
                       smex)
   "A list of packages to ensure are installed at launch.")
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(require 'color-theme-railscasts)
 
 ;;
 ;; LOAD CONFIGURATION FILES
