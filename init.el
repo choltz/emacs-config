@@ -5,7 +5,7 @@
 ;; PACKAGE MANAGEMENT
 ;;
 (require 'package)
-; (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/source/emacs-config")
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa"     . "http://melpa.milkbox.net/packages/"))
 
@@ -15,8 +15,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(color-theme-railscasts
-		      magit
+(defvar my-packages '(magit
 		      key-chord
                       smex)
   "A list of packages to ensure are installed at launch.")
@@ -24,7 +23,8 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-(require 'color-theme-railscasts)
+(load "vendor/color-theme-railscasts.el")
+; (require 'color-theme-railscasts)
 
 ;;
 ;; LOAD CONFIGURATION FILES
