@@ -17,18 +17,20 @@
 
 (defvar my-packages '(magit
 		      key-chord
-                      smex)
+                      smex
+		      undo-tree)
+  
   "A list of packages to ensure are installed at launch.")
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
-
-(load "vendor/color-theme-railscasts.el")
-
-;;
-;; LOAD CONFIGURATION FILES
-;;
-(add-to-list 'load-path "~/source/emacs-config/")
-(load "config")
-(load "keymaps")
-(load "magit-config")
+ (dolist (p my-packages)
+   (when (not (package-installed-p p))
+     (package-install p)))
+  
+ (load "vendor/color-theme-railscasts.el")
+   
+ ;;
+ ;; LOAD CONFIGURATION FILES
+ ;;
+ (add-to-list 'load-path "~/source/emacs-config/")
+ (load "config")
+ (load "keymaps")
+ (load "magit-config")

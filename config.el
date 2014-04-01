@@ -15,6 +15,7 @@
 ;;
 
 (ido-mode)
+(global-undo-tree-mode)
 
 ;;
 ;; DISPLAY FONTS AND FACES
