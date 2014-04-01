@@ -30,4 +30,4 @@
 ;;
 (add-to-list 'load-path "~/source/emacs-config/")
 (load "config")
-(load "keybindings")
+(load "keymaps")
