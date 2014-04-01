@@ -24,7 +24,6 @@
     (package-install p)))
 
 (load "vendor/color-theme-railscasts.el")
-; (require 'color-theme-railscasts)
 
 ;;
 ;; LOAD CONFIGURATION FILES
