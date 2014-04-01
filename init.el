@@ -31,3 +31,4 @@
 (add-to-list 'load-path "~/source/emacs-config/")
 (load "config")
 (load "keymaps")
+(load "magit-config")
