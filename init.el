@@ -24,13 +24,16 @@
  (dolist (p my-packages)
    (when (not (package-installed-p p))
      (package-install p)))
-  
- (load "vendor/color-theme-railscasts.el")
-   
- ;;
- ;; LOAD CONFIGURATION FILES
- ;;
- (add-to-list 'load-path "~/source/emacs-config/")
- (load "config")
- (load "keymaps")
- (load "magit-config")
+
+;;
+;; EXPLICIT LOADS AND REQUIRES
+;;
+(load "vendor/color-theme-railscasts.el")
+
+;;
+;; LOAD CONFIGURATION FILES
+;;
+(add-to-list 'load-path "~/source/emacs-config/")
+(load "config")
+(load "keymaps")
+(load "magit-config")

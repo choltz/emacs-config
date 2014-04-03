@@ -18,6 +18,9 @@
 (global-set-key   [(ctrl z)]       'undo-tree-undo)
 (global-set-key   [(ctrl shift z)] 'undo-tree-redo)
 
+; Key Chords
+(key-chord-define-global "xf"    'find-file)
+
 
 ;; (global-set-key "\M-[1;2C"    'right-char)      ; Ctrl+right   => forward word
 ;; (global-set-key "\M-[1;2D"    'backward-word)     ; Ctrl+left    => backward word
