@@ -9,15 +9,17 @@
 (scroll-bar-mode 0)
 (show-paren-mode t)
 (global-linum-mode)
+(setq-default truncate-lines t)
+
 
 ;;
-;; BEHAVIOR SETITINGS
+;; BEHAVIOR SETINGS
 ;;
 
 (ido-mode)
 (global-undo-tree-mode)
 (key-chord-mode 1)
-
+(desktop-save-mode 1)
 
 ;;
 ;; DISPLAY FONTS AND FACES

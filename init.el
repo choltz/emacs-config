@@ -16,10 +16,11 @@
   (package-refresh-contents))
 
 (defvar my-packages '(magit
+		      jabber
 		      key-chord
-                      smex
+		      smex
 		      undo-tree)
-  
+
   "A list of packages to ensure are installed at launch.")
  (dolist (p my-packages)
    (when (not (package-installed-p p))
@@ -38,3 +39,4 @@
 (load "hooks")
 (load "keymaps")
 (load "magit-config")
+(load "jabber-settings")
