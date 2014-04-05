@@ -18,6 +18,7 @@
 (defvar my-packages '(magit
 		      jabber
 		      key-chord
+		      rvm
 		      smex
 		      undo-tree)
 
