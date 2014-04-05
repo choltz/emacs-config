@@ -15,7 +15,9 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(magit
+(defvar my-packages '(bm
+		      dired+
+		      magit
 		      jabber
 		      key-chord
 		      rvm
