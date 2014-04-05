@@ -5,6 +5,11 @@
 (global-set-key (kbd "C-`")      'bs-show)
 
 
+;; jabber
+(global-set-key (kbd "C-c j i")      'configure-chat-windows)
+(global-set-key (kbd "C-c j r")      'jabber-display-roster)
+(global-set-key (kbd "C-c j j")      'jabber-chat-with)
+
 ;; Magit
 (global-set-key (kbd "C-c g")    'magit-status)
 (global-set-key (kbd "C-c C-g")  'magit-status)
@@ -26,4 +31,3 @@
 ;; (global-set-key "\M-[1;2D"    'backward-word)     ; Ctrl+left    => backward word
 
 ;; (global-set-key "\M-[1;2C"    'buh)      ; Ctrl+right   => forward word
-
