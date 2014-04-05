@@ -1,0 +1,11 @@
+; set convenience aliases
+(defalias 'rs  'replace-string)
+(defalias 'rr  'replace-regexp)
+(defalias 'ar  'align-regexp)
+(defalias 'qrr 'query-replace-regexp)
+(defalias 'jc  'jabber-connect-all)
+(defalias 'jd  'jabber-disconnect)
+(defalias 'jr  (lambda()
+		  (interactive)
+		  (jabber-disconnect)
+		  (jabber-connect-all)))
