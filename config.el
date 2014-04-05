@@ -41,6 +41,14 @@
 (setq comint-input-ring-size 2048) ; undo size
 (setq require-final-newline t)     ; end files with a newline
 (electric-pair-mode)
+;; autocomplete
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "~/source/emacs-config/autocomplete/dict")
+(setq ac-comphist-file  "~/source/emacs-config/ac-comphist.dat")
+(setq ac-use-quick-help t)
+(setq ac-fuzzy-complete t)
+(global-auto-complete-mode t)
+;; (add-to-list 'ac-modes 'web-mode)
 ;; bm
 (setq bm-highlight-style 'bm-highlight-only-fringe)
 ;; cua
@@ -81,3 +89,16 @@
 (setq default-frame-alist '((font . "Ubuntu Mono-12")))
 
 (set-face-background 'show-paren-match-face "#666666")
+
+;;
+;; file type/mode associations
+;;
+(setq auto-mode-alist (cons '("\\Gemfile.lock" . yaml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.html$"       . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.htm$"	       . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.erb$"	       . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.rhtml$"      . web-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.rjs$"	       . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.js$"	       . js2-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.scss$"       . css-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.yml$"	      . yaml-mode) auto-mode-alist))

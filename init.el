@@ -15,14 +15,17 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(bm
-		      dired+
-		      magit
-		      jabber
-		      key-chord
-		      rvm
-		      smex
-		      undo-tree)
+(defvar my-packages '( auto-complete
+		       bm
+		       dired+
+		       magit
+		       jabber
+		       key-chord
+		       rvm
+		       smex
+		       undo-tree
+		       web-mode
+		       yaml-mode)
 
   "A list of packages to ensure are installed at launch.")
  (dolist (p my-packages)
