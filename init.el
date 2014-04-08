@@ -23,6 +23,7 @@
                        js2-mode
                        key-chord
                        rvm
+                       smart-mode-line
                        smex
                        undo-tree
                        web-mode
@@ -37,12 +38,14 @@
 ;; EXPLICIT LOADS AND REQUIRES
 ;;
 (load "vendor/color-theme-railscasts.el")
+(require 'smart-mode-line)
 
 ;;
 ;; LOAD CONFIGURATION FILES
 ;;
 (add-to-list 'load-path "~/source/emacs-config/")
 (load "config")
+(load "general-functions")
 (load "credentials")
 (load "hooks")
 (load "keymaps")
