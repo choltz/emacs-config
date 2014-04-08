@@ -16,16 +16,17 @@
   (package-refresh-contents))
 
 (defvar my-packages '( auto-complete
-		       bm
-		       dired+
-		       magit
-		       jabber
-		       key-chord
-		       rvm
-		       smex
-		       undo-tree
-		       web-mode
-		       yaml-mode)
+                       bm
+                       dired+
+                       magit
+                       jabber
+                       js2-mode
+                       key-chord
+                       rvm
+                       smex
+                       undo-tree
+                       web-mode
+                       yaml-mode)
 
   "A list of packages to ensure are installed at launch.")
  (dolist (p my-packages)
