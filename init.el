@@ -19,10 +19,11 @@
                        bm
                        color-theme
                        dired+
-                       magit
+                       flycheck
                        jabber
                        js2-mode
                        key-chord
+                       magit
                        rvm
                        smart-mode-line
                        smex

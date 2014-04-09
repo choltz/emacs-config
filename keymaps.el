@@ -31,6 +31,17 @@
 (global-set-key   [(ctrl z)]       'undo-tree-undo)
 (global-set-key   [(ctrl shift z)] 'undo-tree-redo)
 
+;; windmove
+(global-set-key  [(meta right)] 'windmove-right)
+(global-set-key  [(meta left)]  'windmove-left)
+(global-set-key  [(meta up)]    'windmove-up)
+(global-set-key  [(meta down)]  'windmove-down)
+(global-set-key  [(meta control right)] 'enlarge-window-horizontally)
+(global-set-key  [(meta control left)]  'shrink-window-horizontally)
+(global-set-key  [(meta control up)]    'shrink-window)
+(global-set-key  [(meta control down)]  'enlarge-window)
+
+
 ; Key Chords
 (key-chord-define-global "xf"    'find-file)
 (key-chord-define-global "cg"   'magit-status)
