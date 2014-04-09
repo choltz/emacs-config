@@ -15,6 +15,8 @@
 (global-set-key (kbd "C-c j i")      'configure-chat-windows)
 (global-set-key (kbd "C-c j r")      'jabber-display-roster)
 (global-set-key (kbd "C-c j j")      'jabber-chat-with)
+(define-key jabber-chat-mode-map (kbd "C-c j u") 'goto-address-at-point)
+(define-key jabber-chat-mode-map [(meta return)] 'newline)
 
 ;; Magit
 (global-set-key (kbd "C-c g")    'magit-status)

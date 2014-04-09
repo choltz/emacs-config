@@ -17,6 +17,7 @@
 
 (defvar my-packages '( auto-complete
                        bm
+                       color-theme
                        dired+
                        magit
                        jabber
@@ -39,16 +40,22 @@
 ;;
 (load "vendor/color-theme-railscasts.el")
 (require 'smart-mode-line)
+(require 'jabber)
 
 ;;
 ;; LOAD CONFIGURATION FILES
 ;;
 (add-to-list 'load-path "~/source/emacs-config/")
 (load "config")
+(load "faces")
 (load "general-functions")
 (load "credentials")
 (load "hooks")
-(load "keymaps")
 (load "magit-config")
-(load "jabber-settings")
+(load "jabber-functions")
 (load "aliases")
+(load "keymaps")
+
+;; load up the scratch perm file
+(kill-buffer "*scratch*")
+(find-file "~/docs/*^ scratch-perm")

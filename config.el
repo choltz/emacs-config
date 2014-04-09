@@ -14,6 +14,8 @@
 (fset 'yes-or-no-p 'y-or-n-p) ; stop forcing me to spell out "yes"
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
+(set-default-font "Ubuntu Mono-12")
+(setq default-frame-alist '((font . "Ubuntu Mono-12")))
 
 ;;
 ;; BEHAVIOR SETINGS
@@ -75,6 +77,15 @@
 ;; ido
 (setq ido-enable-flex-matching t)
 (setq ido-auto-merge-inhibit-characters-regexp ".") ; don't change directories
+;; jabber
+(setq jabber-auto-reconnect t)
+(setq jabber-alert-message-wave "/usr/share/sounds/purple/receive.wav")
+(setq jabber-alert-muc-wave     "/usr/share/sounds/purple/receive.wav")
+(setq jabber-play-sound-file (quote jabber-play-sound-file-alt))
+(setq jabber-history-enabled t)
+(setq jabber-use-global-history nil)
+(setq jabber-history-size-limit 2048)
+(setq jabber-history-dir        "/home/choltz/docs/emacs-jabber")
 ;; js2-mode
 (setq js2-basic-offset 2)
 (setq js2-cleanup-whitespace t)
@@ -93,37 +104,11 @@
       scroll-preserve-screen-position 1)
 (setq mouse-wheel-follow-mouse 't)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
-;; SCSS: Don't compile when saving
+;; scss
 (setq scss-compile-at-save nil)
 ;; spell check
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
       ispell-extra-args '("--sug-mode=ultra"))
-
-
-
-;;
-;; DISPLAY FONTS AND FACES
-;;
-
-(set-default-font "Ubuntu Mono-12")
-(setq default-frame-alist '((font . "Ubuntu Mono-12")))
-(set-face-background 'show-paren-match-face "#666666")
-;; change magit diff colors
-(eval-after-load 'magit
-  '(progn
-     (set-face-foreground 'magit-diff-add "#429907")
-     (set-face-foreground 'magit-diff-del "#CB040F")
-     (when (not window-system)
-       (set-face-background 'magit-item-highlight "black"))))
-;; flycheck
-(custom-set-faces
- '(erm-syn-errline ((t (:box nil :underline (:color "red" :style wave)))))
- '(erm-syn-warnline ((t (:underline (:color "orange" :style wave))))))
-;; smart mode line
-(setq sml/override-theme t)
-(setq sml/active-background-color "#444444")
-(setq sml/inactive-background-color "#222222")
-(set-face-attribute 'sml/filename nil :foreground "#CDBE64")
 
 ;;
 ;; file type/mode associations
@@ -136,7 +121,7 @@
 (setq auto-mode-alist (cons '("\\.rjs$"        . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.js$"         . js2-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.scss$"       . css-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.yml$"       . yaml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.yml$"        . yaml-mode) auto-mode-alist))
 
 ;;
 ;; Complex behaviors
