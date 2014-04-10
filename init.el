@@ -19,6 +19,7 @@
                        bm
                        color-theme
                        dired+
+                       fill-column-indicator
                        flycheck
                        jabber
                        js2-mode
@@ -37,11 +38,17 @@
      (package-install p)))
 
 ;;
+;; LAZY LOAD FUNCTIONS
+;;
+(autoload 'electric-occur            "electric-occur-mode/electric-occur-mode"       t)
+
+;;
 ;; EXPLICIT LOADS AND REQUIRES
 ;;
 (load "vendor/color-theme-railscasts.el")
 (require 'smart-mode-line)
 (require 'jabber)
+(require 'ruby-mode)
 
 ;;
 ;; LOAD CONFIGURATION FILES

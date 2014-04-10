@@ -22,6 +22,9 @@
 (global-set-key (kbd "C-c g")    'magit-status)
 (global-set-key (kbd "C-c C-g")  'magit-status)
 
+;; ruby
+(define-key ruby-mode-map [f2]   'occur-function-list)
+
 ;; Smex
 (global-set-key (kbd "M-X") 'smex)
 (global-set-key (kbd "M-x") 'smex)

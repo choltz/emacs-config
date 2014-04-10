@@ -7,3 +7,8 @@ user."
     (unless (file-writable-p file)
       (setq file (concat "/sudo:root@localhost:" file)))
     (find-file file)))
+
+(defun occur-function-list()
+  (interactive)
+  (progn
+    (electric-occur "def ")))
