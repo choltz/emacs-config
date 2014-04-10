@@ -50,6 +50,7 @@
 (require 'smart-mode-line)
 (require 'jabber)
 (require 'ruby-mode)
+(require 'mu4e)
 
 ;;
 ;; LOAD CONFIGURATION FILES
@@ -64,6 +65,7 @@
 (load "jabber-functions")
 (load "aliases")
 (load "keymaps")
+(load "mu4e-settings")
 
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")

@@ -22,6 +22,13 @@
 (global-set-key (kbd "C-c g")    'magit-status)
 (global-set-key (kbd "C-c C-g")  'magit-status)
 
+;; Mu4e
+(global-set-key (kbd "C-c m s")  'mu4e-headers-search)
+(global-set-key (kbd "C-c m i")  'mu4e-up-to-date-status)
+(define-key mu4e-main-mode-map (kbd "q") 'mu4e-quit-session)
+(define-key mu4e-headers-mode-map (kbd "q") 'mu4e-quit-session)
+(define-key mu4e-headers-mode-map (kbd "M-u") 'mu4e-update-mail-show-window)
+
 ;; ruby
 (define-key ruby-mode-map [f2]   'occur-function-list)
 

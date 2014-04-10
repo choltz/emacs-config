@@ -47,6 +47,7 @@
 (add-to-list 'same-window-regexps "grep") ; make sure grep calls happen in the current window
 (setq pop-up-windows nil)
 (setq minibuffer-prompt-properties (quote (read-only t point-entered minibuffer-avoid-prompt face minibuffer-prompt))) ;; don't let the cursor go into minibuffer prompt
+(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome")
 
 ;; autocomplete
 ;; (require 'auto-complete-config)
