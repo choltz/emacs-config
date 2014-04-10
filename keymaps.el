@@ -5,11 +5,19 @@
 (global-set-key (kbd "C-`")      'bs-show)
 (global-set-key (kbd "C-c r r")  'recentf-open-files)
 (global-set-key (kbd "C-x F")    'find-file-as-root)
+;; (global-set-key (kbd "C-x k")    'close-buffer)
+(global-set-key (kbd "C-x k")    'bury-buffer)
+(global-set-key "\M- "           'dabbrev-expand)
+(global-set-key (kbd "M-g M-g")  'goto-line-and-center)
+(global-set-key (kbd "C-<f12>")  'toggle-frame-fullscreen)
 
 ; BM keybindings
 (global-set-key [(meta m)]    'bm-toggle)
 (global-set-key [(meta up)]   'bm-previous)
 (global-set-key [(meta down)] 'bm-next)
+
+;; ispell
+(global-set-key (kbd "C-c f c")  'ispell-word)
 
 ;; jabber
 (global-set-key (kbd "C-c j i")      'configure-chat-windows)
@@ -18,9 +26,9 @@
 (define-key jabber-chat-mode-map (kbd "C-c j u") 'goto-address-at-point)
 (define-key jabber-chat-mode-map [(meta return)] 'newline)
 
-;; Magit
-(global-set-key (kbd "C-c g")    'magit-status)
-(global-set-key (kbd "C-c C-g")  'magit-status)
+;; Magit / source control
+(global-set-key (kbd "C-c g i")    'magit-status)
+(global-set-key (kbd "C-c g a")    'vc-annotate)
 
 ;; Mu4e
 (global-set-key (kbd "C-c m s")  'mu4e-headers-search)
@@ -28,6 +36,12 @@
 (define-key mu4e-main-mode-map (kbd "q") 'mu4e-quit-session)
 (define-key mu4e-headers-mode-map (kbd "q") 'mu4e-quit-session)
 (define-key mu4e-headers-mode-map (kbd "M-u") 'mu4e-update-mail-show-window)
+
+;; rinari
+(global-set-key (kbd "C-c r m")  'rinari-find-model)
+(global-set-key (kbd "C-c r v")  'rinari-find-view)
+(global-set-key (kbd "C-c r c")  'rinari-find-controller)
+(global-set-key (kbd "C-c r t")  'rinari-find-test)
 
 ;; ruby
 (define-key ruby-mode-map [f2]   'occur-function-list)

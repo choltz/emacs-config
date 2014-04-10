@@ -97,6 +97,7 @@
 (setq magit-diff-options '("-w"))
 (setq magit-status-buffer-switch-function 'switch-to-buffer) ; don't split the window
 ;; ruby
+(global-rinari-mode)
 (setq ruby-insert-encoding-magic-comment nil)
 ;; Scrolling and mouse
 (setq redisplay-dont-pause t

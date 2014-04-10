@@ -25,6 +25,7 @@
                        js2-mode
                        key-chord
                        magit
+                       rinari
                        ruby-end
                        rvm
                        smart-mode-line

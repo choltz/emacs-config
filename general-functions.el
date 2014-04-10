@@ -8,6 +8,12 @@ user."
       (setq file (concat "/sudo:root@localhost:" file)))
     (find-file file)))
 
+(defun goto-line-and-center (line)
+  "Goto the specified line and center the buffer"
+  (interactive "nGoto Line:")
+  (goto-line line)
+  (recenter))
+
 (defun occur-function-list()
   (interactive)
   (progn
