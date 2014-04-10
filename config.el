@@ -70,6 +70,7 @@
                                       'split-window-horizontally
                                     'split-window-vertically))
 ;; fill column mode
+(setq fci-rule-column 100)
 (setq fci-rule-color "#444444")
 (setq fci-rule-use-dashes t)
 (setq fci-dash-pattern .3)
