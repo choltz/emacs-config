@@ -36,6 +36,12 @@
 (define-key mu4e-main-mode-map (kbd "q") 'mu4e-quit-session)
 (define-key mu4e-headers-mode-map (kbd "q") 'mu4e-quit-session)
 (define-key mu4e-headers-mode-map (kbd "M-u") 'mu4e-update-mail-show-window)
+(global-set-key (kbd "C-c m u")  'mu4e-update-mail-and-index)
+(define-key mu4e-headers-mode-map (kbd "SPC") '(lambda()
+                                                 (interactive)
+                                                 (mu4e-headers-view-message)
+                                                 (sleep-for 1)
+                                                 (other-window -1)))
 
 ;; rinari
 (global-set-key (kbd "C-c r m")  'rinari-find-model)
