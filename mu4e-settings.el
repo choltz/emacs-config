@@ -30,7 +30,7 @@
 (setq mu4e-update-interval 60)
 
 ;; Message display settings
-(setq mu4e-view-prefer-html t)
+(setq mu4e-view-prefer-html nil)
 (setq mu4e-html2text-command "w3m -dump -T text/html")
 (setq mu4e-view-show-images t)
 (when (fboundp 'imagemagick-register-types) (imagemagick-register-types))

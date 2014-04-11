@@ -18,3 +18,17 @@ user."
   (interactive)
   (progn
     (electric-occur "def ")))
+;;
+;; Helm advice
+;;
+(defadvice helm-buffer-list(around helm-fullscreen activate)
+  (window-configuration-to-register :before-helm)
+  (define-key helm-map [(return)] 'helm-quit-fullscreen)
+  ad-do-it
+  (delete-other-windows))
+
+(defun helm-quit-fullscreen()
+  "Restores the previous window configuration and kills the magit buffer"
+  (interactive)
+  (helm-exit-minibuffer)
+  (jump-to-register :before-helm))

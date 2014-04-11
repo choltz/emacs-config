@@ -21,12 +21,14 @@
                        dired+
                        fill-column-indicator
                        flycheck
+                       helm
                        jabber
                        js2-mode
                        key-chord
                        magit
                        rinari
                        ruby-end
+                       ruby-tools
                        rvm
                        smart-mode-line
                        smex
