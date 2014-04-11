@@ -55,8 +55,9 @@
 (load "vendor/color-theme-railscasts.el")
 (require 'smart-mode-line)
 (require 'jabber)
-(require 'ruby-mode)
 (require 'mu4e)
+(require 'ruby-mode)
+(require 'ruby-tools)
 
 ;;
 ;; LOAD CONFIGURATION FILES

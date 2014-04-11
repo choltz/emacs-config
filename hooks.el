@@ -9,11 +9,10 @@
 ;; ruby
 (add-hook 'ruby-mode-hook
           '(lambda ()
-             (rvm-activate-corresponding-ruby)
              (ruby-end-mode)
-                ;; (add-to-list 'ac-ignores "end")
-                ;; (make-local-variable 'ac-ignores)
+             (ruby-tools-mode)
+             ;; (add-to-list 'ac-ignores "end")
+             ;; (make-local-variable 'ac-ignores)
              (fci-mode)
              (flycheck-mode)
-
-             ))
+             (rvm-activate-corresponding-ruby)))
