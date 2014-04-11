@@ -8,6 +8,15 @@ user."
       (setq file (concat "/sudo:root@localhost:" file)))
     (find-file file)))
 
+(defun find-git-root(file-path)
+  "recurse up the folder hierarchy to find the root of the git project"
+  (if (equal file-path "")
+      () ; drop out of recursion - nothing found
+    (if (file-exists-p (concat file-path "/.git"))
+        (prog1 file-path) ; drop out of recursion - git folder found
+      (let ((new-path (replace-regexp-in-string "/[^$/]+$" "" file-path)))
+        (find-git-root new-path)))))
+
 (defun goto-line-and-center (line)
   "Goto the specified line and center the buffer"
   (interactive "nGoto Line:")
