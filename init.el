@@ -15,7 +15,8 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '( auto-complete
+(defvar my-packages '( ack
+                       auto-complete
                        bm
                        color-theme
                        dired+
@@ -45,6 +46,8 @@
 ;; LAZY LOAD FUNCTIONS
 ;;
 (autoload 'electric-occur            "electric-occur-mode/electric-occur-mode"       t)
+(autoload 'search-content            "search-content"                                t)
+(autoload 'ffap-string-at-point      "ffap"                                          t)
 
 ;;
 ;; EXPLICIT LOADS AND REQUIRES

@@ -10,6 +10,11 @@
 (global-set-key "\M- "           'dabbrev-expand)
 (global-set-key (kbd "M-g M-g")  'goto-line-and-center)
 (global-set-key (kbd "C-<f12>")  'toggle-frame-fullscreen)
+;; (global-set-key [f3]             'fiplr-find-file)
+(global-set-key [f5]             'search-content)
+;; (global-set-key [f6]             'browse-kill-ring)
+;; (global-set-key [f7]             'flymake-display-err-menu-for-current-line)
+;; (global-set-key [f8]             'ruby-test-buffer)
 
 ; BM keybindings
 (global-set-key [(meta m)]    'bm-toggle)
