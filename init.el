@@ -21,6 +21,7 @@
                        color-theme
                        dired+
                        fill-column-indicator
+                       fiplr
                        flycheck
                        helm
                        jabber

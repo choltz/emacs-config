@@ -15,4 +15,5 @@
              ;; (make-local-variable 'ac-ignores)
              (fci-mode)
              (flycheck-mode)
-             (rvm-activate-corresponding-ruby)))
+             ;; (rvm-activate-corresponding-ruby)
+             ))

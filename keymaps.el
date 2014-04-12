@@ -15,6 +15,7 @@
 ;; (global-set-key [f6]             'browse-kill-ring)
 ;; (global-set-key [f7]             'flymake-display-err-menu-for-current-line)
 ;; (global-set-key [f8]             'ruby-test-buffer)
+(global-set-key [f3]             'fiplr-find-file)
 
 ; BM keybindings
 (global-set-key [(meta m)]    'bm-toggle)
