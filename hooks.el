@@ -17,3 +17,13 @@
              (flycheck-mode)
              ;; (rvm-activate-corresponding-ruby)
              ))
+
+;; sql
+(add-hook 'sql-mode-hook (lambda ()
+                           (define-key sql-mode-map (kbd "RET") 'newline-and-indent)
+                           (define-key sql-mode-map (kbd "C-q") 'sql-quit-session)
+                           (define-key sql-interactive-mode-map (kbd "C-q") 'sql-quit-session)
+                           (define-key sql-mode-map  [(ctrl f5)] 'sql-send-buffer)
+                           (define-key sql-mode-map  [(ctrl f4)] 'sql-send-region)
+                           (sql-set-product 'mysql)
+                           (sql-highlight-mysql-keywords)))

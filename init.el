@@ -74,6 +74,7 @@
 (load "aliases")
 (load "keymaps")
 (load "mu4e-settings")
+(load "sql-presets.el")
 
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")

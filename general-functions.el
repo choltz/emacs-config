@@ -1,3 +1,7 @@
+(defun buffer-exists (bufname)
+  (some #'(lambda (b) (string-equal (buffer-name b) bufname))
+        (buffer-list)))
+
 (defun find-file-as-root ()
   "Like `ido-find-file, but automatically edit the file with
 root-privileges (using tramp/sudo), if the file is not writable by
