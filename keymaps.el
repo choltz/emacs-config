@@ -35,7 +35,7 @@
 (define-key jabber-chat-mode-map [(meta return)] 'newline)
 
 ;; Magit / source control
-(global-set-key (kbd "C-c g i")    'magit-status)
+(global-set-key  "C-c g i")    'magit-status)
 (global-set-key (kbd "C-c g a")    'vc-annotate)
 
 ;; Mu4e
@@ -66,8 +66,9 @@
 (global-set-key (kbd "s-x") 'smex)
 
 ;; undo tree
-(global-set-key   [(ctrl z)]       'undo-tree-undo)
-(global-set-key   [(ctrl shift z)] 'undo-tree-redo)
+(global-set-key [(ctrl z)]       'undo-tree-undo)
+(global-set-key [(ctrl shift z)] 'undo-tree-redo)
+(global-set-key (kbd "C-c z i")  'undo-tree-visualize)
 
 ;; windmove
 (global-set-key  [(meta right)] 'windmove-right)
