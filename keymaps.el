@@ -16,13 +16,23 @@
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
 
-; BM keybindings
+;; BM keybindings
 (global-set-key [(meta m)]    'bm-toggle)
-(global-set-key [(meta up)]   'bm-previous)
-(global-set-key [(meta down)] 'bm-next)
+(global-set-key [(meta shift up)]   'bm-previous)
+(global-set-key [(meta shift down)] 'bm-next)
 
 ;; Calendar
 (global-set-key (kbd "C-c c i")    'cfw:open-calendar-buffer)
+
+;; custom
+(global-set-key (kbd "C-c h d")      'duplicate-line)
+(global-set-key (kbd "C-c h f")      'ffap)
+
+;; database
+(global-set-key (kbd "C-c d i")  'mysql-tatango)
+(global-set-key (kbd "C-c d t")  'mysql-tatango)
+(global-set-key (kbd "C-c d a")  'mysql-albatross)
+(global-set-key (kbd "C-c d p")  'psql-tatango)
 
 ;; ispell
 (global-set-key (kbd "C-c f c")  'ispell-word)
