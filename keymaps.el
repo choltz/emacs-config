@@ -9,15 +9,15 @@
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 ;; (global-set-key (kbd "C-x k")    'close-buffer)
 (global-set-key (kbd "C-x k")    'bury-buffer)
+(global-set-key (kbd "C-c k")    '(lambda() (interactive) (kill-buffer (buffer-name(current-buffer)))))
 (global-set-key "\M- "           'dabbrev-expand)
 (global-set-key (kbd "M-g M-g")  'goto-line-and-center)
 (global-set-key (kbd "C-<f12>")  'toggle-frame-fullscreen)
-;; (global-set-key [f3]             'fiplr-find-file)
 (global-set-key [f5]             'search-content)
 ;; (global-set-key [f6]             'browse-kill-ring)
-;; (global-set-key [f7]             'flymake-display-err-menu-for-current-line)
 ;; (global-set-key [f8]             'ruby-test-buffer)
 (global-set-key [f3]             'fiplr-find-file)
+(global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
 
 ; BM keybindings
 (global-set-key [(meta m)]    'bm-toggle)
