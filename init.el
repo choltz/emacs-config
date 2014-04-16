@@ -59,6 +59,7 @@
 (require 'mu4e)
 (require 'ruby-mode)
 (require 'ruby-tools)
+(require 'calfw)
 
 ;;
 ;; LOAD CONFIGURATION FILES

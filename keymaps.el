@@ -7,15 +7,12 @@
 (global-set-key (kbd "C-x F")    'find-file-as-root)
 (define-key global-map (kbd "C-=") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
-;; (global-set-key (kbd "C-x k")    'close-buffer)
 (global-set-key (kbd "C-x k")    'bury-buffer)
 (global-set-key (kbd "C-c k")    '(lambda() (interactive) (kill-buffer (buffer-name(current-buffer)))))
 (global-set-key "\M- "           'dabbrev-expand)
 (global-set-key (kbd "M-g M-g")  'goto-line-and-center)
 (global-set-key (kbd "C-<f12>")  'toggle-frame-fullscreen)
 (global-set-key [f5]             'search-content)
-;; (global-set-key [f6]             'browse-kill-ring)
-;; (global-set-key [f8]             'ruby-test-buffer)
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
 
@@ -23,6 +20,9 @@
 (global-set-key [(meta m)]    'bm-toggle)
 (global-set-key [(meta up)]   'bm-previous)
 (global-set-key [(meta down)] 'bm-next)
+
+;; Calendar
+(global-set-key (kbd "C-c c i")    'cfw:open-calendar-buffer)
 
 ;; ispell
 (global-set-key (kbd "C-c f c")  'ispell-word)
@@ -35,7 +35,7 @@
 (define-key jabber-chat-mode-map [(meta return)] 'newline)
 
 ;; Magit / source control
-(global-set-key  "C-c g i")    'magit-status)
+(global-set-key (kbd "C-c g i")    'magit-status)
 (global-set-key (kbd "C-c g a")    'vc-annotate)
 
 ;; Mu4e
