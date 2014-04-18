@@ -1,4 +1,4 @@
-; Miscellaneous
+;; Miscellaneous
 (global-set-key [C-tab]          'mode-line-other-buffer)
 (global-set-key [insert]         'nil) ; disable insert
 (global-set-key [f4]             'bs-show)
