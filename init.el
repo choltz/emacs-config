@@ -20,6 +20,7 @@
                        bm
                        color-theme
                        dired+
+                       expand-region
                        fill-column-indicator
                        fiplr
                        flycheck
