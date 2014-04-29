@@ -19,6 +19,7 @@
                        auto-complete
                        back-button
                        ;; bm
+                       calfw
                        color-theme
                        dired+
                        expand-region
@@ -82,3 +83,4 @@
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")
 (find-file "~/docs/*^ scratch-perm")
+(toggle-frame-fullscreen)
