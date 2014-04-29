@@ -2,6 +2,10 @@
   (some #'(lambda (b) (string-equal (buffer-name b) bufname))
         (buffer-list)))
 
+(defun close-buffer()
+  (interactive)
+  (kill-buffer (buffer-name(current-buffer))))
+
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)

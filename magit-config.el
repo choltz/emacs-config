@@ -11,3 +11,22 @@
   (interactive)
   (kill-buffer)
   (jump-to-register :before-magit))
+
+;;
+;; Monkey-patch vc-annotate to save the windows configuration to
+;; a register first. then when closing the annotation window,
+;; return the window configuration to its previous state
+;;
+
+(defadvice vc-annotate (before vc-annotate-preserve-windows)
+  "Save the window configuration before calling vc-annotate"
+
+  (define-key vc-annotate-mode-map  (kbd "q") (lambda()
+                                                (interactive)
+                                                (close-buffer)
+                                                (pp "buh")
+                                                (jump-to-register :before-annotate)))
+
+  (window-configuration-to-register :before-annotate)
+  (delete-other-windows))
+(ad-activate 'vc-annotate)
