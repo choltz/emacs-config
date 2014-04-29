@@ -15,6 +15,7 @@
 (global-set-key [f5]             'search-content)
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
+(global-set-key (kbd "C-X F")    'find-file)
 
 ;; BM keybindings
 (global-set-key [(meta m)]    'bm-toggle)
@@ -93,6 +94,7 @@
 
 ; Key Chords
 (key-chord-define-global "xf"    'find-file)
+(key-chord-define-global "XF"    'find-file)
 (key-chord-define-global "cg"   'magit-status)
 
 ;; (global-set-key "\M-[1;2C"    'right-char)      ; Ctrl+right   => forward word
