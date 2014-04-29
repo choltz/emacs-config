@@ -17,7 +17,8 @@
 
 (defvar my-packages '( ack
                        auto-complete
-                       bm
+                       back-button
+                       ;; bm
                        color-theme
                        dired+
                        expand-region
