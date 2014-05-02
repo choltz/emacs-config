@@ -18,7 +18,7 @@
 (defvar my-packages '( ack
                        auto-complete
                        back-button
-                       ;; bm
+                       bm
                        calfw
                        color-theme
                        dired+
