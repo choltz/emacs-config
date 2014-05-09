@@ -59,7 +59,7 @@
 (global-auto-complete-mode t)
 ;; (add-to-list 'ac-modes 'web-mode)
 ;; bm
-(setq bm-highlight-style 'bm-highlight-only-fringe)
+(setq bm-highlight-style 'bm-highlight-only-line)
 ;; cua
 (setq cua-keep-region-after-copy t)
 ;; dired

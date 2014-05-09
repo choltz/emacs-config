@@ -1,5 +1,9 @@
 (set-face-background 'show-paren-match-face "#666666")
 
+;; bm mode
+(custom-set-faces
+ '(bm-face ((t (:background "#492F03" :foreground "#999999")))))
+
 ;; change magit diff colors
 (eval-after-load 'magit
   '(progn
