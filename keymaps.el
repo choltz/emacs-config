@@ -18,14 +18,9 @@
 (global-set-key (kbd "C-X F")    'find-file)
 
 ;; BM keybindings
-;; (global-set-key [(meta m)]          'bm-toggle)
-;; (global-set-key [(meta shift up)]   'bm-previous)
-;; (global-set-key [(meta shift down)] 'bm-next)
-;; Back button keybindings
-(global-set-key [(meta m)]          'back-button-push-mark-local-and-global)
-(global-set-key [(meta shift up)]   'back-button-local-backward)
-(global-set-key [(meta shift down)] 'back-button-local-forward)
-
+(global-set-key [(meta m)]          'bm-toggle)
+(global-set-key [(meta shift up)]   'bm-previous)
+(global-set-key [(meta shift down)] 'bm-next)
 
 ;; Calendar
 (global-set-key (kbd "C-c c i")    'cfw:open-calendar-buffer)

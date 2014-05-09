@@ -17,7 +17,6 @@
 
 (defvar my-packages '( ack
                        auto-complete
-                       back-button
                        bm
                        calfw
                        color-theme
