@@ -82,4 +82,4 @@
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")
 (find-file "~/docs/*^ scratch-perm")
-(toggle-frame-fullscreen)
+;(toggle-frame-fullscreen)
