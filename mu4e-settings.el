@@ -5,7 +5,7 @@
 (setq mu4e-sent-folder   "/[Gmail].Sent Mail")
 (setq mu4e-trash-folder  "/[Gmail].Trash")
 (setq mu4e-refile-folder "/arcana")
-(setq mu4e-attachment-dir "~/Downloads")
+(setq mu4e-attachment-dir "~/downloads")
 
 ;; setup some handy shortcuts
 ;; you can quickly switch to your Inbox -- press ``ji''
