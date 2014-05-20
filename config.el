@@ -4,7 +4,6 @@
 
 (tool-bar-mode 0)
 (menu-bar-mode 0)
-(scroll-bar-mode 0)
 (show-paren-mode t)
 (setq visible-bell t)
 (global-linum-mode)
@@ -16,6 +15,7 @@
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
 (set-default-font "Ubuntu Mono-12")
 (setq default-frame-alist '((font . "Ubuntu Mono-12")))
+(setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 
 ;;
 ;; BEHAVIOR SETINGS
@@ -146,3 +146,7 @@
                                                      plain-tex-mode))
                 (let ((mark-even-if-inactive transient-mark-mode))
                   (indent-region (region-beginning) (region-end) nil))))))
+
+
+(load "vendor/color-theme-railscasts.el")
+(scroll-bar-mode 0)
