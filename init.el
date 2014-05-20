@@ -8,6 +8,7 @@
 (add-to-list 'load-path "~/source/emacs-config")
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa"     . "http://melpa.milkbox.net/packages/"))
+;; (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 
 (package-initialize)
 (setq package-enable-at-startup nil)
