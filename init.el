@@ -30,6 +30,8 @@
                        js2-mode
                        key-chord
                        magit
+                       paradox
+                       popwin
                        rinari
                        ruby-end
                        ruby-tools
@@ -55,13 +57,13 @@
 ;;
 ;; EXPLICIT LOADS AND REQUIRES
 ;;
-(load "vendor/color-theme-railscasts.el")
 (require 'smart-mode-line)
 (require 'jabber)
 (require 'mu4e)
 (require 'ruby-mode)
 (require 'ruby-tools)
 (require 'calfw)
+(require 'popwin)
 
 ;;
 ;; LOAD CONFIGURATION FILES
