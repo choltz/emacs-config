@@ -30,6 +30,7 @@
                        jabber
                        js2-mode
                        key-chord
+                       lua-mode
                        magit
                        paradox
                        popwin
