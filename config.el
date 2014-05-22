@@ -13,8 +13,15 @@
 (fset 'yes-or-no-p 'y-or-n-p) ; stop forcing me to spell out "yes"
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
-(set-default-font "Ubuntu Mono-12")
-(setq default-frame-alist '((font . "Ubuntu Mono-12")))
+
+(if (string= system-name "gtmf")
+  (progn
+    (set-default-font "Ubuntu Mono-16")
+    (setq default-frame-alist '((font . "Ubuntu Mono-16"))))
+  (progn
+    (set-default-font "Ubuntu Mono-12")
+    (setq default-frame-alist '((font . "Ubuntu Mono-12")))))
+
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 
 ;;
