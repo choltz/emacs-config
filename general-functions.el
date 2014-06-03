@@ -1,3 +1,13 @@
+(defun bm-next-and-center()
+  (interactive)
+  (bm-next)
+  (recenter))
+
+(defun bm-previous-and-center()
+  (interactive)
+  (bm-previous)
+  (recenter))
+
 (defun buffer-exists (bufname)
   (some #'(lambda (b) (string-equal (buffer-name b) bufname))
         (buffer-list)))

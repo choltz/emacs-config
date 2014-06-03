@@ -19,8 +19,8 @@
 
 ;; BM keybindings
 (global-set-key [(meta m)]          'bm-toggle)
-(global-set-key [(meta shift up)]   'bm-previous)
-(global-set-key [(meta shift down)] 'bm-next)
+(global-set-key [(meta shift up)]   'bm-previous-and-center)
+(global-set-key [(meta shift down)] 'bm-next-and-center)
 
 ;; Calendar
 (global-set-key (kbd "C-c c i")    'cfw:open-calendar-buffer)
