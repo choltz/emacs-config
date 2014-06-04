@@ -51,7 +51,11 @@
 (setq require-final-newline t)     ; end files with a newline
 (electric-pair-mode)
 (setq-default indent-tabs-mode nil)
-(setq-default c-basic-offset 4)
+(setq-default c-basic-offset 2)
+;; set default tab char's display width to 2 spaces
+(setq-default tab-width 2)
+(setq tab-width 2)
+
 (add-to-list 'same-window-regexps "grep") ; make sure grep calls happen in the current window
 (setq pop-up-windows nil)
 (setq minibuffer-prompt-properties (quote (read-only t point-entered minibuffer-avoid-prompt face minibuffer-prompt))) ;; don't let the cursor go into minibuffer prompt
@@ -71,6 +75,8 @@
 (setq bm-highlight-style 'bm-highlight-only-line)
 ;; cua
 (setq cua-keep-region-after-copy t)
+;; css mode
+(setq css-indent-offset 2)
 ;; dired
 (setq dired-isearch-filenames t)
 (toggle-diredp-find-file-reuse-dir 1)
