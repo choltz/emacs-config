@@ -41,6 +41,7 @@
                            (define-key sql-mode-map  [(ctrl f5)] 'sql-send-buffer)
                            (define-key sql-mode-map  [(ctrl f4)] 'sql-send-region)
                            (sql-set-product 'mysql)
+                           (auto-complete-mode)
                            (sql-highlight-mysql-keywords)))
 
 ;; text mode
