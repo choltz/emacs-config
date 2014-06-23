@@ -25,9 +25,13 @@
   (interactive)
   (sql-query 'tatango))
 
-(defun psql-tatango()
+(defun auth-dev()
   (interactive)
-  (sql-query 'tatango-psql))
+  (sql-query 'auth-dev))
+
+(defun webapp-dev()
+  (interactive)
+  (sql-query 'webapp-dev))
 
 ;; Restore previous window configuration
 (defun sql-quit-session ()
