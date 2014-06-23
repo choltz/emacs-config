@@ -34,6 +34,7 @@
                        magit
                        paradox
                        popwin
+                       rainbow-mode
                        rinari
                        ruby-end
                        ruby-tools
