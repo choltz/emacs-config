@@ -14,13 +14,20 @@
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
 
+;; Come back and clean this up; nested ifs are ugly
 (if (string= system-name "gtmf")
   (progn
     (set-default-font "Ubuntu Mono-16")
     (setq default-frame-alist '((font . "Ubuntu Mono-16"))))
   (progn
-    (set-default-font "Ubuntu Mono-12")
-    (setq default-frame-alist '((font . "Ubuntu Mono-12")))))
+    (if (string= system-name "vader")
+      (progn
+        (set-default-font "Ubuntu Mono-26")
+        (setq default-frame-alist '((font . "Ubuntu Mono-26"))))
+      (progn
+        (set-default-font "Ubuntu Mono-12")
+      (setq default-frame-alist '((font . "Ubuntu Mono-12")))))))
+
 
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 
