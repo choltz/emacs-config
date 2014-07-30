@@ -115,7 +115,21 @@
 (setq js2-basic-offset 2)
 (setq js2-cleanup-whitespace t)
 ;; magit settings
-(setq magit-repo-dirs (quote ("~/source/tatango" "~/source/deploy" "~/source/albatross" "~/source/messaging" "~/scripts" "~/docs" "~/keys" "~/source/cblog" "~/emacs" "~/source/mail_check")))
+(setq magit-repo-dirs (quote ("~/source/tatango"
+                              "~/source/deploy"
+                              "~/source/albatross"
+                              "~/source/messaging"
+                              "~/scripts"
+                              "~/docs"
+                              "~/keys"
+                              "~/source/cblog"
+                              "~/emacs"
+                              "~/source/mail_check"
+                              "~/source/webapp"
+                              "~/source/auth"
+                              "~/source/sds"
+                              "~/source/devtools"
+                              "~/source/linux_scripts")))
 (setq magit-repo-dirs-depth 1)
 (setq magit-diff-options '("-w"))
 (setq magit-status-buffer-switch-function 'switch-to-buffer) ; don't split the window
