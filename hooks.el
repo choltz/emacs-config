@@ -30,8 +30,10 @@
              ;; (make-local-variable 'ac-ignores)
              (fci-mode)
              (flycheck-mode)
+             (define-key ruby-mode-map (kbd "SPC") 'ruby-method-space-replace)
              ;; (rvm-activate-corresponding-ruby)
              ))
+
 
 ;; sql
 (add-hook 'sql-mode-hook (lambda ()
