@@ -78,3 +78,13 @@ user."
       (if (get-buffer new-name)
           (message "A buffer named '%s' already exists!" new-name)
         (progn   (rename-file name new-name 1)   (rename-buffer new-name)        (set-visited-file-name new-name)        (set-buffer-modified-p nil))))))
+
+(defun ruby-method-space-replace ()
+  "When pressing space while naming a defined method, insert an underscore"
+  (interactive)
+  (if (and (looking-back "def .+")
+           (not (and
+                 (looking-at ".*)$")
+                 (looking-back "(.*"))))
+      (insert "_")
+    (insert " ")))
