@@ -16,6 +16,9 @@
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
 (global-set-key (kbd "C-X F")    'find-file)
+(global-set-key (kbd "C-x |")    'split-window-right)
+(global-set-key (kbd "C-x \\")   'split-window-right)
+(global-set-key (kbd "C-x -")    'split-window-below)
 
 ;; BM keybindings
 (global-set-key [(meta m)]          'bm-toggle)
