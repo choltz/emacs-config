@@ -51,6 +51,7 @@
 ;; Magit / source control
 (global-set-key (kbd "C-c g i")    'magit-status)
 (global-set-key (kbd "C-c g a")    'vc-annotate)
+(global-set-key (kbd "C-c t")      'insert-initials-and-timestamp)
 
 ;; Mu4e
 (global-set-key (kbd "C-c m s")  'mu4e-headers-search)

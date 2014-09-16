@@ -88,3 +88,15 @@ user."
                  (looking-back "(.*"))))
       (insert "_")
     (insert " ")))
+
+
+;; (define-key global-map "\C-cc" 'org-capture)
+;; (setq org-capture-templates
+;;       '(
+;;         ("d" "Done" entry (file+datetree "~/some_org_file.org")
+;;          "** %(format-time-string \"%Y.%m.%d %H:%M\") - %?%i\n" :prepend t)
+;;         ))
+
+(defun insert-initials-and-timestamp()
+  (interactive)
+  (insert (concat "CDH - " (format-time-string "%Y-%m-%d" (current-time)) " - ")))
