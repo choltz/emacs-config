@@ -27,6 +27,7 @@
                        fiplr
                        flycheck
                        helm
+                       indent-guide
                        jabber
                        js2-mode
                        key-chord
@@ -67,6 +68,7 @@
 (require 'ruby-tools)
 (require 'calfw)
 (require 'popwin)
+(require 'indent-guide)
 
 ;;
 ;; LOAD CONFIGURATION FILES
@@ -87,4 +89,5 @@
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")
 (find-file "~/docs/*^ scratch-perm")
+(find-file "~/docs/*^ schedule")
 ;(toggle-frame-fullscreen)
