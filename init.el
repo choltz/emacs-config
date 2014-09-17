@@ -67,6 +67,7 @@
 (require 'ruby-tools)
 (require 'calfw)
 (require 'popwin)
+(require 'indent-guide)
 
 ;;
 ;; LOAD CONFIGURATION FILES

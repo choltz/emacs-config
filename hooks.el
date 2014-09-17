@@ -14,6 +14,7 @@
 ;; js2 mode
 (add-hook 'js2-mode-hook
           '(lambda ()
+             (indent-guide-mode)
              (fci-mode)))
 
 ;; markdown
@@ -26,6 +27,7 @@
           '(lambda ()
              (ruby-end-mode)
              (ruby-tools-mode)
+             (indent-guide-mode)
              ;; (add-to-list 'ac-ignores "end")
              ;; (make-local-variable 'ac-ignores)
              (fci-mode)
@@ -55,4 +57,5 @@
 (add-hook 'web-mode-hook
           '(lambda ()
              (rainbow-mode)
+             (indent-guide-mode)
              (auto-complete-mode)))

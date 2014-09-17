@@ -102,6 +102,8 @@
 ;; ido
 (setq ido-enable-flex-matching t)
 (setq ido-auto-merge-inhibit-characters-regexp ".") ; don't change directories
+;; indent guide mode
+(setq indent-guide-recursive nil)
 ;; jabber
 (setq jabber-auto-reconnect t)
 (setq jabber-alert-message-wave "/usr/share/sounds/purple/receive.wav")
