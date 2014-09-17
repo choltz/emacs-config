@@ -16,6 +16,9 @@
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
 (global-set-key (kbd "C-X F")    'find-file)
+(global-set-key (kbd "C-x |")    'split-window-right)
+(global-set-key (kbd "C-x \\")   'split-window-right)
+(global-set-key (kbd "C-x -")    'split-window-below)
 
 ;; BM keybindings
 (global-set-key [(meta m)]          'bm-toggle)
@@ -48,6 +51,7 @@
 ;; Magit / source control
 (global-set-key (kbd "C-c g i")    'magit-status)
 (global-set-key (kbd "C-c g a")    'vc-annotate)
+(global-set-key (kbd "C-c t")      'insert-initials-and-timestamp)
 
 ;; Mu4e
 (global-set-key (kbd "C-c m s")  'mu4e-headers-search)

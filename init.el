@@ -27,6 +27,7 @@
                        fiplr
                        flycheck
                        helm
+                       indent-guide
                        jabber
                        js2-mode
                        key-chord
@@ -88,4 +89,5 @@
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")
 (find-file "~/docs/*^ scratch-perm")
+(find-file "~/docs/*^ schedule")
 ;(toggle-frame-fullscreen)
