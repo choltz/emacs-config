@@ -12,7 +12,8 @@
 (global-set-key "\M- "           'er/expand-region)
 (global-set-key (kbd "M-g M-g")  'goto-line-and-center)
 (global-set-key (kbd "C-<f12>")  'toggle-frame-fullscreen)
-(global-set-key [f5]             'search-content)
+;; (global-set-key [f5]             'search-content)
+(global-set-key [f5]             'ag-project)
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
 (global-set-key (kbd "C-X F")    'find-file)

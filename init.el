@@ -17,6 +17,7 @@
   (package-refresh-contents))
 
 (defvar my-packages '( ack
+                       ag
                        auto-complete
                        bm
                        calfw

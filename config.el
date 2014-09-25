@@ -70,6 +70,8 @@
 (ruby-tools-mode t)
 (popwin-mode 1)
 
+;; ag
+(setq ag-reuse-window t)
 ;; autocomplete
 ;; (require 'auto-complete-config)
 ;; (add-to-list 'ac-dictionary-directories "~/source/emacs-config/autocomplete/dict")
