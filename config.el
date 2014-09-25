@@ -151,6 +151,8 @@
 ;; spell check
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
       ispell-extra-args '("--sug-mode=ultra"))
+;; tramp
+(setq tramp-default-method "ssh")
 
 ;;
 ;; file type/mode associations
