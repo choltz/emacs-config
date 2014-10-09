@@ -22,6 +22,7 @@
                        calfw
                        color-theme
                        dired+
+                       dockerfile-mode
                        expand-region
                        fill-column-indicator
                        fiplr
