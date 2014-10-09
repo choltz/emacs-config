@@ -70,6 +70,8 @@
 (ruby-tools-mode t)
 (popwin-mode 1)
 
+;; ag
+(setq ag-reuse-window t)
 ;; autocomplete
 ;; (require 'auto-complete-config)
 ;; (add-to-list 'ac-dictionary-directories "~/source/emacs-config/autocomplete/dict")
@@ -151,6 +153,8 @@
 ;; spell check
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
       ispell-extra-args '("--sug-mode=ultra"))
+;; tramp
+(setq tramp-default-method "ssh")
 
 ;;
 ;; file type/mode associations
