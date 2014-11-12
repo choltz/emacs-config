@@ -1,10 +1,10 @@
 ;;
 ;; Mailbox setup
 ;;
-(setq mu4e-drafts-folder "/[Gmail].Drafts")
-(setq mu4e-sent-folder   "/[Gmail].Sent Mail")
-(setq mu4e-trash-folder  "/[Gmail].Trash")
-(setq mu4e-refile-folder "/arcana")
+(setq mu4e-drafts-folder "/Drafts")
+(setq mu4e-sent-folder   "/Sent")
+(setq mu4e-trash-folder  "/Trash")
+(setq mu4e-refile-folder "~/docs/i4cp/mail_archive")
 (setq mu4e-attachment-dir "~/downloads")
 
 ;; setup some handy shortcuts
@@ -40,8 +40,8 @@
 ;; Smtp settings
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-stream-type 'starttls
-      smtpmail-default-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-default-smtp-server "east.exch080.serverdata.net"
+      smtpmail-smtp-server "east.exch080.serverdata.net"
       smtpmail-smtp-service 587)
 
 ;;
