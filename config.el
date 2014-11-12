@@ -73,13 +73,11 @@
 ;; ag
 (setq ag-reuse-window t)
 ;; autocomplete
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/source/emacs-config/autocomplete/dict")
 (setq ac-comphist-file  "~/source/emacs-config/ac-comphist.dat")
 (setq ac-use-quick-help t)
 (setq ac-fuzzy-complete t)
 (global-auto-complete-mode t)
-;; (add-to-list 'ac-modes 'web-mode)
+(add-to-list 'ac-modes 'web-mode)
 ;; bm
 (setq bm-highlight-style 'bm-highlight-only-line)
 ;; cua
