@@ -25,13 +25,29 @@
   (interactive)
   (sql-query 'tatango))
 
-(defun auth-dev()
+(defun auth-vader()
   (interactive)
-  (sql-query 'auth-dev))
+  (sql-query 'auth-vader))
 
-(defun webapp-dev()
+(defun webapp-vader()
   (interactive)
-  (sql-query 'webapp-dev))
+  (sql-query 'webapp-vader))
+
+(defun sds-vader()
+  (interactive)
+  (sql-query 'sds-vader))
+
+(defun auth-odin()
+  (interactive)
+  (sql-query 'auth-odin))
+
+(defun webapp-odin()
+  (interactive)
+  (sql-query 'webapp-odin))
+
+(defun sds-odin()
+  (interactive)
+  (sql-query 'sds-odin))
 
 ;; Restore previous window configuration
 (defun sql-quit-session ()
