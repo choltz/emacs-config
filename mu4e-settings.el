@@ -33,6 +33,9 @@
 (setq mu4e-contacts-func 'mu4e~fill-contacts)
 (mu4e~proc-contacts nil nil)
 
+
+(setq mu4e-view-show-addresses t)
+
 ;; Message display settings
 (setq mu4e-view-prefer-html t)
 ;;(setq mu4e-html2text-command "w3m -dump -T text/html")
