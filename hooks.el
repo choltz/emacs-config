@@ -31,7 +31,7 @@
              ;; (add-to-list 'ac-ignores "end")
              ;; (make-local-variable 'ac-ignores)
              (fci-mode)
-             (flycheck-mode)
+             ;; (flycheck-mode)
              (define-key ruby-mode-map (kbd "SPC") 'ruby-method-space-replace)
              ;; (rvm-activate-corresponding-ruby)
              ))
