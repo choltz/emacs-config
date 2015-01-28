@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-`")      'bs-show)
 (global-set-key (kbd "C-c r r")  'recentf-open-files)
 (global-set-key (kbd "C-x F")    'find-file-as-root)
+(global-set-key [f6]             'popup-kill-ring)
 (define-key global-map (kbd "C-=") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 (global-set-key (kbd "C-x k")    'bury-buffer)
