@@ -43,6 +43,7 @@
 (key-chord-mode 1)
 (desktop-save-mode 1)
 (winner-mode)
+;(golden-ratio-mode t)
 ;; miscellaneious behavior settings
 (setq x-select-enable-clipboard t)
 (setq kill-do-not-save-duplicates t)
