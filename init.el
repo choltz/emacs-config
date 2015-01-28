@@ -21,6 +21,7 @@
                        auto-complete
                        bm
                        calfw
+                       centered-window-mode
                        color-theme
                        dired+
                        dockerfile-mode
@@ -28,6 +29,7 @@
                        fill-column-indicator
                        fiplr
                        flycheck
+                       golden-ratio
                        helm
                        indent-guide
                        jabber
@@ -36,6 +38,7 @@
                        lua-mode
                        magit
                        paradox
+                       popup-kill-ring
                        popwin
                        rainbow-mode
                        rinari
