@@ -6,6 +6,15 @@
           '(lambda ()
              (rainbow-mode)))
 
+
+(add-hook 'emacs-lisp-mode-hook (lambda ()
+                                  (rainbow-delimiters-mode)))
+;; ediff
+;(add-hook 'ediff-mode-hook '(lambda ()
+;                              (ediff-setup-keymap)
+;                              (define-key ediff-mode-map "j" 'ediff-next-difference)
+;                              (define-key ediff-mode-map "k" 'ediff-previous-difference)))
+
 ;; jabber
 (add-hook 'jabber-chat-mode-hook (lambda ()
                                    (visual-line-mode)
@@ -15,6 +24,7 @@
 (add-hook 'js2-mode-hook
           '(lambda ()
              (indent-guide-mode)
+             (rainbow-delimiters-mode)
              (fci-mode)))
 
 ;; markdown
@@ -28,6 +38,7 @@
              (ruby-end-mode)
              (ruby-tools-mode)
              (indent-guide-mode)
+             (rainbow-delimiters-mode)
              ;; (add-to-list 'ac-ignores "end")
              ;; (make-local-variable 'ac-ignores)
              (fci-mode)
@@ -45,6 +56,7 @@
                            (define-key sql-mode-map  [(ctrl f5)] 'sql-send-buffer)
                            (define-key sql-mode-map  [(ctrl f4)] 'sql-send-region)
                            (sql-set-product 'mysql)
+                           (rainbow-delimiters-mode)
                            (auto-complete-mode)
                            (sql-highlight-mysql-keywords)))
 

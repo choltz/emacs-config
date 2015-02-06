@@ -40,6 +40,7 @@
                        paradox
                        popup-kill-ring
                        popwin
+                       rainbow-delimiters
                        rainbow-mode
                        rinari
                        ruby-end
