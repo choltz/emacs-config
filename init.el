@@ -31,14 +31,14 @@
                        flycheck
                        golden-ratio
                        helm
+                       hydra
                        indent-guide
                        jabber
                        js2-mode
                        key-chord
                        lua-mode
                        magit
-                       paradox
-                       popup-kill-ring
+                       browse-kill-ring
                        popwin
                        rainbow-delimiters
                        rainbow-mode
