@@ -45,6 +45,10 @@
   (interactive)
   (sql-query 'webapp-odin))
 
+(defun webapp-odin-test()
+  (interactive)
+  (sql-query 'webapp-odin-test))
+
 (defun sds-odin()
   (interactive)
   (sql-query 'sds-odin))
