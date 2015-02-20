@@ -59,3 +59,41 @@
   (interactive)
   (window-configuration-to-register :sql-fullscreen)
   (jump-to-register :before-sql))
+
+
+
+;;
+;; Position sql results on a new line so that the field headers are aligned
+;; with the data below it.
+;;
+;; Taken from http://www.emacswiki.org/emacs/SqlMode and then modified
+;; to play nice with emacs 24.4.
+;;
+(defvar sql-last-prompt-pos 1
+  "position of last prompt when added recording started")
+(make-variable-buffer-local 'sql-last-prompt-pos)
+(put 'sql-last-prompt-pos 'permanent-local t)
+
+(defun sql-add-newline-first (output)
+  "Add newline to beginning of OUTPUT for `comint-preoutput-filter-functions'
+    This fixes up the display of queries sent to the inferior buffer
+    programatically."
+  (let ((begin-of-prompt
+         (or
+                  ;; sometimes this overlay is not on prompt
+                  (save-excursion
+                    (looking-at-p comint-prompt-regexp)
+                    (point))
+             1)))
+    (if (> begin-of-prompt sql-last-prompt-pos)
+        (progn
+          (setq sql-last-prompt-pos begin-of-prompt)
+          (concat "\n" output))
+      output)))
+
+(defun sqli-add-hooks ()
+  "Add hooks to `sql-interactive-mode-hook'."
+  (add-hook 'comint-preoutput-filter-functions
+            'sql-add-newline-first))
+
+(add-hook 'sql-interactive-mode-hook 'sqli-add-hooks)
