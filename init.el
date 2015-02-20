@@ -40,6 +40,7 @@
                        magit
                        browse-kill-ring
                        popwin
+                       powerline
                        rainbow-delimiters
                        rainbow-mode
                        rinari
