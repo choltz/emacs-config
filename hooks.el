@@ -32,6 +32,12 @@
           (lambda ()
             (visual-line-mode)))
 
+;; mu4e
+(add-hook 'mu4e-view-mode-hook
+          '(lambda()
+             (visual-line-mode)
+             (text-scale-set +1)))
+
 ;; ruby
 (add-hook 'ruby-mode-hook
           '(lambda ()
