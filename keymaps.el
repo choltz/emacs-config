@@ -109,6 +109,7 @@
 ; Key Chords
 (key-chord-define-global "xf"    'find-file)
 (key-chord-define-global "XF"    'find-file)
+(key-chord-define-global "cf"    'find-file)
 (key-chord-define-global "cg"   'magit-status)
 
 ;; (global-set-key "\M-[1;2C"    'right-char)      ; Ctrl+right   => forward word
