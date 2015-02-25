@@ -23,6 +23,7 @@
                        calfw
                        color-theme
                        dired+
+                       dired-rainbow
                        dockerfile-mode
                        expand-region
                        fill-column-indicator
