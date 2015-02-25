@@ -21,6 +21,7 @@
                        auto-complete
                        bm
                        calfw
+                       centered-window-mode
                        color-theme
                        dired+
                        dired-rainbow
@@ -29,15 +30,19 @@
                        fill-column-indicator
                        fiplr
                        flycheck
+                       golden-ratio
                        helm
+                       hydra
                        indent-guide
                        jabber
                        js2-mode
                        key-chord
                        lua-mode
                        magit
-                       paradox
+                       browse-kill-ring
                        popwin
+                       powerline
+                       rainbow-delimiters
                        rainbow-mode
                        rinari
                        ruby-end

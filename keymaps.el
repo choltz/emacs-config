@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-`")      'bs-show)
 (global-set-key (kbd "C-c r r")  'recentf-open-files)
 (global-set-key (kbd "C-x F")    'find-file-as-root)
+(global-set-key [f6]             'browse-kill-ring)
 (define-key global-map (kbd "C-=") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 (global-set-key (kbd "C-x k")    'bury-buffer)
@@ -38,6 +39,10 @@
 (global-set-key (kbd "C-c d t")  'mysql-tatango)
 (global-set-key (kbd "C-c d a")  'mysql-albatross)
 (global-set-key (kbd "C-c d p")  'psql-tatango)
+
+;; dired
+(define-key dired-mode-map "j" 'dired-next-line)
+(define-key dired-mode-map "k" 'dired-previous-line)
 
 ;; ispell
 (global-set-key (kbd "C-c f c")  'ispell-word)
@@ -73,8 +78,12 @@
 (global-set-key (kbd "C-c r c")  'rinari-find-controller)
 (global-set-key (kbd "C-c r t")  'rinari-find-test)
 
+;; recentf
+;(define-key recentf-mode-map "j" 'next-line)
+;(define-key recentf-mode-map "k" 'previous-line)
+
 ;; ruby
-(define-key ruby-mode-map [f2]   'occur-function-list)
+;;(define-key ruby-mode-map [f2]   'occur-function-list)
 
 ;; Smex
 (global-set-key (kbd "M-X") 'smex)
@@ -100,9 +109,17 @@
 ; Key Chords
 (key-chord-define-global "xf"    'find-file)
 (key-chord-define-global "XF"    'find-file)
+(key-chord-define-global "cf"    'find-file)
 (key-chord-define-global "cg"   'magit-status)
 
 ;; (global-set-key "\M-[1;2C"    'right-char)      ; Ctrl+right   => forward word
 ;; (global-set-key "\M-[1;2D"    'backward-word)     ; Ctrl+left    => backward word
 
 ;; (global-set-key "\M-[1;2C"    'buh)      ; Ctrl+right   => forward word
+
+(global-set-key
+ (kbd "C-<f2>")
+ (defhydra hydra-stuff ()
+   "stuff"
+   ("=" text-scale-increase)
+   ("-" text-scale-decrease)))
