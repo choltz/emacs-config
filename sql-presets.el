@@ -78,14 +78,13 @@
 (defun sql-send-region-better (start end)
   "Send a region to the SQL process."
   (interactive "r")
-      (save-excursion
-        (add-hook 'comint-preoutput-filter-functions
-                  'sql-add-newline-first)
-        (comint-send-region sql-buffer start end)
-        (if (string-match "\n$" (buffer-substring start end))
-            ()
-          (comint-send-string sql-buffer "\n"))
-        (message "Sent string to buffer %s." (buffer-name sql-buffer))))
+  (save-excursion
+    (add-hook 'comint-preoutput-filter-functions
+              'sql-add-newline-first)
+    (comint-send-region sql-buffer start end)
+    (if (string-match "\n$" (buffer-substring start end))
+        ()
+      (comint-send-string sql-buffer "\n"))))
 
 (defun sqli-add-hooks ()
   "Add hooks to `sql-interactive-mode-hook'."

@@ -60,7 +60,7 @@
                            (define-key sql-mode-map (kbd "C-q") 'sql-quit-session)
                            (define-key sql-interactive-mode-map (kbd "C-q") 'sql-quit-session)
                            (define-key sql-mode-map  [(ctrl f5)] 'sql-send-buffer)
-                           (define-key sql-mode-map  [(ctrl f4)] 'sql-send-region)
+                           (define-key sql-mode-map  [(ctrl f4)] 'sql-send-region-better)
                            (sql-set-product 'mysql)
                            (rainbow-delimiters-mode)
                            (auto-complete-mode)
