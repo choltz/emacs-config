@@ -86,6 +86,11 @@
         ()
       (comint-send-string sql-buffer "\n"))))
 
+(defun sql-send-buffer-better ()
+  "Send a buffer to the SQL process."
+  (interactive)
+  (sql-send-region-better (point-min) (point-max)))
+
 (defun sqli-add-hooks ()
   "Add hooks to `sql-interactive-mode-hook'."
   (add-hook 'comint-preoutput-filter-functions
