@@ -63,33 +63,29 @@
 
 
 ;;
-;; Position sql results on a new line so that the field headers are aligned
-;; with the data below it.
+;; Shamelessly borrowed from
+;; https://stackoverflow.com/questions/5541622/comint-mode-inserts-line-break-every-4096-characters
 ;;
-;; Taken from http://www.emacswiki.org/emacs/SqlMode and then modified
-;; to play nice with emacs 24.4.
+;; Fixes sql output so it shows up on a new line. Without this the sql prompt
+;; messes up the position of the sql field headers - misaligning them from their content
 ;;
-(defvar sql-last-prompt-pos 1
-  "position of last prompt when added recording started")
-(make-variable-buffer-local 'sql-last-prompt-pos)
-(put 'sql-last-prompt-pos 'permanent-local t)
-
 (defun sql-add-newline-first (output)
-  "Add newline to beginning of OUTPUT for `comint-preoutput-filter-functions'
-    This fixes up the display of queries sent to the inferior buffer
-    programatically."
-  (let ((begin-of-prompt
-         (or
-                  ;; sometimes this overlay is not on prompt
-                  (save-excursion
-                    (looking-at-p comint-prompt-regexp)
-                    (point))
-             1)))
-    (if (> begin-of-prompt sql-last-prompt-pos)
-        (progn
-          (setq sql-last-prompt-pos begin-of-prompt)
-          (concat "\n" output))
-      output)))
+  "Add newline to beginning of OUTPUT for `comint-preoutput-filter-functions'"
+  (remove-hook 'comint-preoutput-filter-functions
+               'sql-add-newline-first)
+  (concat "\n" output))
+
+(defun sql-send-region-better (start end)
+  "Send a region to the SQL process."
+  (interactive "r")
+      (save-excursion
+        (add-hook 'comint-preoutput-filter-functions
+                  'sql-add-newline-first)
+        (comint-send-region sql-buffer start end)
+        (if (string-match "\n$" (buffer-substring start end))
+            ()
+          (comint-send-string sql-buffer "\n"))
+        (message "Sent string to buffer %s." (buffer-name sql-buffer))))
 
 (defun sqli-add-hooks ()
   "Add hooks to `sql-interactive-mode-hook'."
