@@ -45,6 +45,10 @@
   (interactive)
   (sql-query 'webapp-odin))
 
+(defun webapp-loki()
+  (interactive)
+  (sql-query 'webapp-loki))
+
 (defun webapp-odin-test()
   (interactive)
   (sql-query 'webapp-odin-test))
