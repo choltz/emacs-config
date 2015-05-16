@@ -34,7 +34,6 @@
                        helm
                        hydra
                        indent-guide
-                       jabber
                        js2-mode
                        key-chord
                        lua-mode
@@ -44,6 +43,7 @@
                        powerline
                        rainbow-delimiters
                        rainbow-mode
+                       railscasts-theme
                        rinari
                        ruby-end
                        ruby-tools
@@ -70,13 +70,13 @@
 ;; EXPLICIT LOADS AND REQUIRES
 ;;
 (require 'smart-mode-line)
-(require 'jabber)
 (require 'mu4e)
 (require 'ruby-mode)
 (require 'ruby-tools)
 (require 'calfw)
 (require 'popwin)
 (require 'indent-guide)
+(require 'color-theme-railscasts)
 
 ;;
 ;; LOAD CONFIGURATION FILES
@@ -88,7 +88,6 @@
 (load "credentials")
 (load "hooks")
 (load "magit-config")
-(load "jabber-functions")
 (load "aliases")
 (load "keymaps")
 (load "mu4e-settings")
@@ -96,6 +95,6 @@
 
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")
-(find-file "~/docs/*^ scratch-perm")
-(find-file "~/docs/*^ schedule")
+;;(find-file "~/docs/*^ scratch-perm")
+;;(find-file "~/docs/*^ schedule")
 ;(toggle-frame-fullscreen)
