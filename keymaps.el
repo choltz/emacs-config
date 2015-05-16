@@ -47,13 +47,6 @@
 ;; ispell
 (global-set-key (kbd "C-c f c")  'ispell-word)
 
-;; jabber
-(global-set-key (kbd "C-c j i")      'configure-chat-windows)
-(global-set-key (kbd "C-c j r")      'jabber-display-roster)
-(global-set-key (kbd "C-c j j")      'jabber-chat-with)
-(define-key jabber-chat-mode-map (kbd "C-c j u") 'goto-address-at-point)
-(define-key jabber-chat-mode-map [(meta return)] 'newline)
-
 ;; Magit / source control
 (global-set-key (kbd "C-c g i")    'magit-status)
 (global-set-key (kbd "C-c g a")    'vc-annotate)

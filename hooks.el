@@ -15,11 +15,6 @@
 ;                              (define-key ediff-mode-map "j" 'ediff-next-difference)
 ;                              (define-key ediff-mode-map "k" 'ediff-previous-difference)))
 
-;; jabber
-(add-hook 'jabber-chat-mode-hook (lambda ()
-                                   (visual-line-mode)
-                                   (turn-on-flyspell)
-                                   (text-scale-set -2)))
 ;; js2 mode
 (add-hook 'js2-mode-hook
           '(lambda ()
