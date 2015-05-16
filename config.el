@@ -91,6 +91,7 @@
 (setq dired-listing-switches "-alh --group-directories-first")
 ;; ediff - don't spawn a new frame
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+; (setq ediff-split-window-function 'split-window-horizontally)
 (setq ediff-split-window-function (if (> (frame-width) 150)
                                       'split-window-horizontally
                                     'split-window-vertically))

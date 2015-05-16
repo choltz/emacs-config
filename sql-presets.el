@@ -68,32 +68,52 @@
 ;;
 ;; Fixes sql output so it shows up on a new line. Without this the sql prompt
 ;; messes up the position of the sql field headers - misaligning them from their content
-;;
 (defun sql-add-newline-first (output)
-  "Add newline to beginning of OUTPUT for `comint-preoutput-filter-functions'"
-  (remove-hook 'comint-preoutput-filter-functions
-               'sql-add-newline-first)
-  (concat "\n" output))
+   "Add newline to beginning of OUTPUT for `comint-preoutput-filter-functions'"
+   (remove-hook 'comint-preoutput-filter-functions
+                'sql-add-newline-first)
+   (concat "\n" output))
 
 (defun sql-send-region-better (start end)
-  "Send a region to the SQL process."
-  (interactive "r")
-  (save-excursion
-    (add-hook 'comint-preoutput-filter-functions
-              'sql-add-newline-first)
-    (comint-send-region sql-buffer start end)
-    (if (string-match "\n$" (buffer-substring start end))
-        ()
-      (comint-send-string sql-buffer "\n"))))
+   "Send a region to the SQL process."
+   (interactive "r")
+   (save-excursion
+     (add-hook 'comint-preoutput-filter-functions
+               'sql-add-newline-first)
+     (comint-send-region sql-buffer start end)
+     (if (string-match "\n$" (buffer-substring start end))
+         ()
+       (comint-send-string sql-buffer "\n"))))
 
 (defun sql-send-buffer-better ()
-  "Send a buffer to the SQL process."
-  (interactive)
-  (sql-send-region-better (point-min) (point-max)))
+   "Send a buffer to the SQL process."
+   (interactive)
+   (sql-send-region-better (point-min) (point-max)))
 
 (defun sqli-add-hooks ()
-  "Add hooks to `sql-interactive-mode-hook'."
-  (add-hook 'comint-preoutput-filter-functions
-            'sql-add-newline-first))
+   "Add hooks to `sql-interactive-mode-hook'."
+   (add-hook 'comint-preoutput-filter-functions
+             'sql-add-newline-first))
 
 (add-hook 'sql-interactive-mode-hook 'sqli-add-hooks)
+
+
+;;
+;; https://stackoverflow.com/questions/22091936/emacs-how-to-capitalize-all-keywords-example-in-sql/22092266#22092266
+;;
+
+(defun point-in-comment ()
+  (let ((syn (syntax-ppss)))
+    (and (nth 8 syn)
+         (not (nth 3 syn)))))
+
+(defun my-capitalize-all-mysql-keywords ()
+  (interactive)
+  (require 'sql)
+  (save-excursion
+    (dolist (keywords sql-mode-mysql-font-lock-keywords)
+      (goto-char (point-min))
+      (while (re-search-forward (car keywords) nil t)
+        (unless (point-in-comment)
+          (goto-char (match-beginning 0))
+          (upcase-word 1))))))
