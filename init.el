@@ -10,6 +10,8 @@
 (add-to-list 'package-archives '("melpa"     . "http://melpa.org/packages/"))
 ;; (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+
 (package-initialize)
 (setq package-enable-at-startup nil)
 
@@ -30,6 +32,7 @@
                        fill-column-indicator
                        fiplr
                        flycheck
+                       git-timemachine
                        golden-ratio
                        helm
                        hydra

@@ -38,6 +38,10 @@
              (visual-line-mode)
              (text-scale-set +1)))
 
+; (add-hook 'mu4e-index-updated-hook
+;           (defun new-mail-sound ()
+;             (shell-command "mpg123 '/home/choltz/scripts/mail/aurora.mp3'&")))
+
 ;; ruby
 (add-hook 'ruby-mode-hook
           '(lambda ()
