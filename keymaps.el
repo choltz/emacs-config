@@ -44,8 +44,15 @@
 (define-key dired-mode-map "j" 'dired-next-line)
 (define-key dired-mode-map "k" 'dired-previous-line)
 
-;; ispell
+;; file operations
 (global-set-key (kbd "C-c f c")  'ispell-word)
+(global-set-key (kbd "C-c f t")    '(lambda()
+                                      (interactive)
+                                      (find-file "~/docs/*^ scratch-perm")))
+(global-set-key (kbd "C-c f t")    '(lambda()
+                                      (interactive)
+                                      (find-file "~/docs/*^ schedule")))
+
 
 ;; Magit / source control
 (global-set-key (kbd "C-c g i")    'magit-status)
