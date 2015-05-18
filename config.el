@@ -25,8 +25,6 @@
 
 
 ;; (desktop-save-mode 1)
-
-
 (setq-default truncate-lines t)
 (fset 'yes-or-no-p 'y-or-n-p) ; stop forcing me to spell out "yes"
 (setq linum-format "%4d ")
@@ -35,6 +33,10 @@
 (set-default-font "Ubuntu Mono-12")
 (setq default-frame-alist '((font . "Ubuntu Mono-12")))
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
+
+; set the current horizontal line color and maintain syntax highlighting
+(set-face-background 'hl-line "#2E3233")
+(set-face-foreground 'highlight nil)
 
 ;;
 ;; BEHAVIOR SETINGS
