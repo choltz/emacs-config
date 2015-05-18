@@ -49,7 +49,7 @@
 (global-set-key (kbd "C-c f t")    '(lambda()
                                       (interactive)
                                       (find-file "~/docs/*^ scratch-perm")))
-(global-set-key (kbd "C-c f t")    '(lambda()
+(global-set-key (kbd "C-c f s")    '(lambda()
                                       (interactive)
                                       (find-file "~/docs/*^ schedule")))
 
