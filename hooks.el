@@ -33,6 +33,17 @@
              (visual-line-mode)
              (text-scale-set +1)))
 
+(add-hook 'mu4e-compose-mode-hook
+          (defun mu4e-custom-compose-settings ()
+            (text-scale-set +1)
+            (set-fill-column 100)
+            (flyspell-mode)))
+
+(add-hook 'mu4e-compose-mode-hook
+          (defun mu4e-custom-add-bcc ()
+            "Add a cc: header."
+            (save-excursion (message-add-header "cc: \n"))))
+
 ; (add-hook 'mu4e-index-updated-hook
 ;           (defun new-mail-sound ()
 ;             (shell-command "mpg123 '/home/choltz/scripts/mail/aurora.mp3'&")))
