@@ -87,4 +87,12 @@
              (rainbow-mode)
              (indent-guide-mode)
              (setq web-mode-markup-indent-offset 2)
-             (auto-complete-mode)))
+             (setq web-mode-code-indent-offset 2)
+             (setq web-mode-script-padding 2)
+             (setq web-mode-style-padding 2)
+             (setq web-mode-enable-auto-pairing nil)
+
+             (setq web-mode-extra-auto-pairs
+                   '(("erb"  . (("beg" "end")))))
+             (auto-complete-mode)
+             ))
