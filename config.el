@@ -142,7 +142,7 @@
 (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-ac-sources-alist
       '(("css" . (ac-source-css-property))
-        ("html" . (ac-source-words-in-buffer ac-source-abbrev)))
+        ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
 
 ;;
 ;; file type/mode associations
