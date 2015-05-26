@@ -86,4 +86,5 @@
           '(lambda ()
              (rainbow-mode)
              (indent-guide-mode)
+             (setq web-mode-markup-indent-offset 2)
              (auto-complete-mode)))
