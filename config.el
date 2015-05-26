@@ -30,26 +30,9 @@
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
 
-<<<<<<< Updated upstream
 (set-default-font "Ubuntu Mono-12")
 (setq default-frame-alist '((font . "Ubuntu Mono-12")))
-=======
-;; Come back and clean this up; nested ifs are ugly
-(if (string= system-name "gtmf")
-  (progn
-    (set-default-font "Ubuntu Mono-16")
-    (setq default-frame-alist '((font . "Ubuntu Mono-12"))))
-  (progn
-    (if (string= system-name "vader")
-      (progn
-        (set-default-font "Ubuntu Mono-")
-        (setq default-frame-alist '((font . "Ubuntu Mono-12"))))
-      (progn
-        (set-default-font "Ubuntu Mono-12")
-      (setq default-frame-alist '((font . "Ubuntu Mono-12")))))))
 
-
->>>>>>> Stashed changes
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 
 ; set the current horizontal line color and maintain syntax highlighting
