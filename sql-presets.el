@@ -41,9 +41,21 @@
   (interactive)
   (sql-query 'auth-odin))
 
+(defun dw-odin()
+  (interactive)
+  (sql-query 'dw-odin))
+
 (defun webapp-odin()
   (interactive)
   (sql-query 'webapp-odin))
+
+(defun webapp-tmp()
+  (interactive)
+  (sql-query 'webapp-tmp))
+
+(defun webapp-compare()
+  (interactive)
+  (sql-query 'webapp-compare))
 
 (defun webapp-loki()
   (interactive)

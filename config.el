@@ -23,12 +23,15 @@
 (global-auto-complete-mode t) ; only dev modes?
 (scroll-bar-mode 0)
 
-
 ;; (desktop-save-mode 1)
 (setq-default truncate-lines t)
 (fset 'yes-or-no-p 'y-or-n-p) ; stop forcing me to spell out "yes"
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
+(setq vc-follow-symlinks t)
+
+
+
 
 (set-default-font "Ubuntu Mono-12")
 (setq default-frame-alist '((font . "Ubuntu Mono-12")))
@@ -46,7 +49,6 @@
 ;; miscellaneious behavior settings
 (setq x-select-enable-clipboard t)
 (setq kill-do-not-save-duplicates t)
-(setq initial-scratch-message nil) ;don't show scratch message
 (setq delete-by-moving-to-trash t)
 (setq tags-revert-without-query 1)
 (setq inhibit-startup-message t)
@@ -68,7 +70,7 @@
 ;; ag
 (setq ag-reuse-window t)
 ;; autocomplete
-(setq ac-comphist-file  "~/source/emacs-config/ac-comphist.dat")
+(setq ac-comphist-file  "~/src/emacs-config/ac-comphist.dat")
 (setq ac-use-quick-help t)
 (setq ac-fuzzy-complete t)
 (add-to-list 'ac-modes 'web-mode)
@@ -97,38 +99,42 @@
 ;; ido
 (setq ido-enable-flex-matching t)
 (setq ido-auto-merge-inhibit-characters-regexp ".") ; don't change directories
+(setq ido-create-new-buffer 'always)
+(setq ido-use-faces t)
 ;; indent guide mode
 (setq indent-guide-recursive nil)
 ;; js2-mode
 (setq js2-basic-offset 2)
 (setq js2-cleanup-whitespace t)
 ;; magit settings
-(setq magit-repo-dirs (quote ("~/source/tatango"
-                              "~/source/deploy"
-                              "~/source/albatross"
-                              "~/source/messaging"
+(setq magit-repo-dirs (quote ("~/src/tatango"
+                              "~/src/deploy"
+                              "~/src/albatross"
+                              "~/src/messaging"
                               "~/scripts"
                               "~/docs"
                               "~/keys"
-                              "~/source/cblog"
+                              "~/src/cblog"
                               "~/emacs"
-                              "~/source/mail_check"
-                              "~/source/webapp"
-                              "~/source/auth"
-                              "~/source/sds"
-                              "~/source/devtools"
-                              "~/source/linux_scripts")))
+                              "~/src/mail_check"
+                              "~/src/webapp"
+                              "~/src/auth"
+                              "~/src/sds"
+                              "~/src/devtools"
+                              "~/src/linux_scripts")))
 (setq magit-repo-dirs-depth 1)
 (setq magit-diff-options '("-w"))
 (setq magit-status-buffer-switch-function 'switch-to-buffer) ; don't split the window
+(setq magit-auto-revert-mode nil)
 ;; ruby
 (setq ruby-insert-encoding-magic-comment nil)
 ;; Scrolling and mouse
 (setq redisplay-dont-pause t
-      scroll-margin 1
+      scroll-margin 15
       scroll-step 1
       scroll-conservatively 10000
       scroll-preserve-screen-position 1)
+
 (setq mouse-wheel-follow-mouse 't)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 ;; scss
@@ -139,7 +145,7 @@
 ;; tramp
 (setq tramp-default-method "ssh")
 ;; web-mode
-(setq web-mode-enable-current-element-highlight t)
+(setq web-mode-enable-current-element-highlight nil)
 (setq web-mode-ac-sources-alist
       '(("css" . (ac-source-css-property))
         ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
