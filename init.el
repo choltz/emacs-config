@@ -5,7 +5,7 @@
 ;; PACKAGE MANAGEMENT
 ;;
 (require 'package)
-(add-to-list 'load-path "~/source/emacs-config")
+(add-to-list 'load-path "~/src/emacs-config")
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa"     . "http://melpa.org/packages/"))
 ;; (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
@@ -49,6 +49,7 @@
                        powerline
                        rainbow-delimiters
                        rainbow-mode
+                       swiper
                        color-theme-railscasts
                        rinari
                        ruby-end
@@ -87,7 +88,7 @@
 ;;
 ;; LOAD CONFIGURATION FILES
 ;;
-(add-to-list 'load-path "~/source/emacs-config/")
+(add-to-list 'load-path "~/src/emacs-config/")
 (load "config")
 (load "faces")
 (load "general-functions")
