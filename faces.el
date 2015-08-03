@@ -5,12 +5,12 @@
  '(bm-face ((t (:background "#492F03" :foreground "#999999")))))
 
 ;; change magit diff colors
-(eval-after-load 'magit
-  '(progn
-     (set-face-foreground 'magit-diff-add "#429907")
-     (set-face-foreground 'magit-diff-del "#CB040F")
-     (when (not window-system)
-       (set-face-background 'magit-item-highlight "black"))))
+;; (eval-after-load 'magit
+;;   '(progn
+;;      (set-face-foreground 'magit-diff-add "#429907")
+;;      (set-face-foreground 'magit-diff-del "#CB040F")
+;;      (when (not window-system)
+;;        (set-face-background 'magit-item-highlight "black"))))
 
 ;; flycheck
 (custom-set-faces

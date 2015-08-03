@@ -23,16 +23,30 @@
 (global-auto-complete-mode t) ; only dev modes?
 (scroll-bar-mode 0)
 
-;; (desktop-save-mode 1)
+;; Enable desktop save - grab the 10 most recently used buffers. grab the rest in the background.
+;; update the destop save file every 5-ish minutes
+;; credit: http://doc.rix.si/org/fsem.html
+(desktop-save-mode 1)
+(setq desktop-restore-eager 10)
+(defun choltz/desktop-save ()
+  "Write the desktop save file to ~/.emacs.d"
+  (desktop-save (concat (getenv "HOME")
+                        "/.emacs.d/")))
+(if (not (boundp 'choltz/desktop-save-timer))
+    (setq choltz/desktop-save-timer
+          (run-with-idle-timer 300 t 'choltz/desktop-save)))
+
 (setq-default truncate-lines t)
 (fset 'yes-or-no-p 'y-or-n-p) ; stop forcing me to spell out "yes"
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
 (setq vc-follow-symlinks t)
 
+;; Silence warning when processes are active
+(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+  (flet ((process-list ())) ad-do-it))
 
-
-
+;; fonts
 (set-default-font "Ubuntu Mono-12")
 (setq default-frame-alist '((font . "Ubuntu Mono-12")))
 
@@ -135,9 +149,16 @@
       scroll-step 1
       scroll-conservatively 10000
       scroll-preserve-screen-position 1)
-
 (setq mouse-wheel-follow-mouse 't)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+;; save minibuffer history
+(setq savehist-file (concat user-emacs-directory "savehist"))
+(savehist-mode 1)
+(setq savehist-save-minibuffer-history 1)
+(setq savehist-additional-variables
+      '(kill-ring
+        search-ring
+        regexp-search-ring))
 ;; scss
 (setq scss-compile-at-save nil)
 ;; spell check
