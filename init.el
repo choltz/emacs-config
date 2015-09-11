@@ -49,7 +49,6 @@
                        powerline
                        rainbow-delimiters
                        rainbow-mode
-                       swiper
                        color-theme-railscasts
                        rinari
                        ruby-end
