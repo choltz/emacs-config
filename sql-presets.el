@@ -37,6 +37,10 @@
   (interactive)
   (sql-query 'sds-vader))
 
+(defun dw-vader()
+  (interactive)
+  (sql-query 'dw-vader))
+
 (defun auth-odin()
   (interactive)
   (sql-query 'auth-odin))
