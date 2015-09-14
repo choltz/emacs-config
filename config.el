@@ -23,19 +23,6 @@
 (global-auto-complete-mode t) ; only dev modes?
 (scroll-bar-mode 0)
 
-;; Enable desktop save - grab the 10 most recently used buffers. grab the rest in the background.
-;; update the destop save file every 5-ish minutes
-;; credit: http://doc.rix.si/org/fsem.html
-(desktop-save-mode 1)
-(setq desktop-restore-eager 10)
-(defun choltz/desktop-save ()
-  "Write the desktop save file to ~/.emacs.d"
-  (desktop-save (concat (getenv "HOME")
-                        "/.emacs.d/")))
-(if (not (boundp 'choltz/desktop-save-timer))
-    (setq choltz/desktop-save-timer
-          (run-with-idle-timer 300 t 'choltz/desktop-save)))
-
 (setq-default truncate-lines t)
 (fset 'yes-or-no-p 'y-or-n-p) ; stop forcing me to spell out "yes"
 (setq linum-format "%4d ")
@@ -49,6 +36,7 @@
 ;; fonts
 (set-default-font "Ubuntu Mono-12")
 (setq default-frame-alist '((font . "Ubuntu Mono-12")))
+
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 
 ; set the current horizontal line color and maintain syntax highlighting
