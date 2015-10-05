@@ -34,8 +34,13 @@
   (flet ((process-list ())) ad-do-it))
 
 ;; fonts
+<<<<<<< HEAD
 (set-default-font "Ubuntu Mono-20")
 (setq default-frame-alist '((font . "Ubuntu Mono-20")))
+=======
+(set-default-font "Ubuntu Mono-12")
+(setq default-frame-alist '((font . "Ubuntu Mono-12")))
+>>>>>>> origin/master
 
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 

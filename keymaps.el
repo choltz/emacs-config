@@ -23,6 +23,9 @@
 (global-set-key (kbd "C-x -")    'split-window-below)
 ; (global-set-key (kbd "C-s")      'swiper)
 
+(global-set-key [f12]             'kmacro-end-and-call-macro)
+
+
 ;; BM keybindings
 (global-set-key [(meta m)]          'bm-toggle)
 (global-set-key [(meta shift up)]   'bm-previous-and-center)

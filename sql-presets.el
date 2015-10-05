@@ -1,17 +1,17 @@
 (defun sql-query(name)
   (interactive "SDatabase: ")
-  (if (buffer-exists "*SQL* QUERY")
+  (if (buffer-exists (concat "*SQL* QUERY " (symbol-name name)))
       (progn
         (window-configuration-to-register :before-sql)
         (jump-to-register :sql-fullscreen))
     (progn
       (window-configuration-to-register :before-sql)
-      (switch-to-buffer "*SQL* QUERY")
+      (switch-to-buffer (concat "*SQL* QUERY " (symbol-name name)))
       (delete-other-windows)
       (sql-mode)
       (sql-connect-preset name)
       (split-window-vertically)
-      (switch-to-buffer "*SQL* QUERY")
+      (switch-to-buffer (concat "*SQL* QUERY " (symbol-name name)))
       (window-configuration-to-register :mysql-fullscreen))))
 
 (defun sql-connect-preset (name)
@@ -48,6 +48,10 @@
 (defun dw-odin()
   (interactive)
   (sql-query 'dw-odin))
+
+(defun dw-odin-test()
+  (interactive)
+  (sql-query 'dw-odin-test))
 
 (defun webapp-odin()
   (interactive)
