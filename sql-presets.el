@@ -73,6 +73,10 @@
   (interactive)
   (sql-query 'sds-odin))
 
+(defun orthnac-loki()
+  (interactive)
+  (sql-query 'orthnac-loki))
+
 ;; Restore previous window configuration
 (defun sql-quit-session ()
   "Restores the previous window configuration"
