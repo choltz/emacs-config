@@ -11,7 +11,6 @@
 (column-number-mode)
 (cua-mode t)
 (ido-mode)
-(global-undo-tree-mode)
 (recentf-mode)
 (key-chord-mode 1)
 (winner-mode)

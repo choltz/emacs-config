@@ -50,12 +50,12 @@
                        swiper
                        color-theme-railscasts
                        rinari
+                       redo+
                        ruby-end
                        ruby-tools
                        rvm
                        smart-mode-line
                        smex
-                       undo-tree
                        web-mode
                        yaml-mode)
 
@@ -82,6 +82,7 @@
 (require 'popwin)
 (require 'indent-guide)
 (require 'color-theme-railscasts)
+(require 'redo+)
 
 ;;
 ;; LOAD CONFIGURATION FILES
