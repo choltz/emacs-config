@@ -27,6 +27,7 @@
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
 (setq vc-follow-symlinks t)
+(setq create-lockfiles nil)
 
 ;; Silence warning when processes are active
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
