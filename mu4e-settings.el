@@ -22,17 +22,16 @@
 (setq message-kill-buffer-on-exit t) ; don't keep message buffers around
 
 ;; Retrieve mail settings
-;; (setq mu4e-get-mail-command "offlineimap")
-;; (setq mu4e-update-interval 60)
-(setq mu4e-get-mail-command nil) ; pull email via crontab script
-
+;; (setq mu4e-get-mail-command nil) ; pull email via crontab script
+(setq
+ mu4e-get-mail-command "offlineimap"   ;; or fetchmail, or ...
+ mu4e-update-interval 60)             ;; update every 1 minute
 
 ;; Hack to get address completion to work properly
 ;; Note - if you 'M-x mu4e' first, then you don't need this because everything
 ;; initializes properly
-(setq mu4e-contacts-func 'mu4e~fill-contacts)
-(mu4e~proc-contacts nil nil)
-
+;; (setq mu4e-contacts-func 'mu4e~fill-contacts)
+;; (mu4e~proc-contacts nil nil)
 
 (setq mu4e-view-show-addresses t)
 
@@ -53,6 +52,10 @@
       smtpmail-default-smtp-server "east.exch080.serverdata.net"
       smtpmail-smtp-server "east.exch080.serverdata.net"
       smtpmail-smtp-service 587)
+
+
+(mu4e-alert-set-default-style 'libnotify)
+(add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
 
 ;;
 ;; Functions

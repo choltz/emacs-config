@@ -11,7 +11,6 @@
 (column-number-mode)
 (cua-mode t)
 (ido-mode)
-(global-undo-tree-mode)
 (recentf-mode)
 (key-chord-mode 1)
 (winner-mode)
@@ -28,6 +27,7 @@
 (setq linum-format "%4d ")
 (setq bs-must-always-show-regexp "\\*scratch\\*\\|*magit: scripts*\\|\\\*^.*")
 (setq vc-follow-symlinks t)
+(setq create-lockfiles nil)
 
 ;; Silence warning when processes are active
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
@@ -108,7 +108,17 @@
 ;; js2-mode
 (setq js2-basic-offset 2)
 (setq js2-cleanup-whitespace t)
+;; js3-mode
+(setq js3-basic-offset 2)
+(setq js3-cleanup-whitespace t)
+(setq js3-auto-indent-p t)
+(setq js3-auto-insert-catch-block nil)
+(setq js3-enter-indents-newline t)
+(setq js3-indent-on-enter-key t)
+(setq js3-strict-missing-semi-warning t)
+
 ;; magit settings
+
 (setq magit-repo-dirs (quote ("~/src/tatango"
                               "~/src/deploy"
                               "~/src/albatross"
@@ -158,6 +168,9 @@
 (setq web-mode-ac-sources-alist
       '(("css" . (ac-source-css-property))
         ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+;; yasnippet
+(setq yas-snippet-dirs (append yas-snippet-dirs
+                               '("~/src/emacs-config/snippets")))
 
 ;;
 ;; file type/mode associations
@@ -168,7 +181,7 @@
 (setq auto-mode-alist (cons '("\\.erb$"        . web-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rhtml$"      . web-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rjs$"        . ruby-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.js$"         . js2-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.js$"         . js3-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.scss$"       . css-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.yml$"        . yaml-mode) auto-mode-alist))
 
