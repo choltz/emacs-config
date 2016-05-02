@@ -33,6 +33,10 @@
   (interactive)
   (sql-query 'webapp-vader))
 
+(defun dw-vader()
+  (interactive)
+  (sql-query 'dw-vader))
+
 (defun sds-vader()
   (interactive)
   (sql-query 'sds-vader))
