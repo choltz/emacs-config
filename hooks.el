@@ -22,6 +22,13 @@
              (rainbow-delimiters-mode)
              (fci-mode)))
 
+;; js2 mode
+(add-hook 'js3-mode-hook
+          '(lambda ()
+             (indent-guide-mode)
+             (rainbow-delimiters-mode)
+             (fci-mode)))
+
 ;; markdown
 (add-hook 'markdown-mode-hook
           (lambda ()

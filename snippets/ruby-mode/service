@@ -1,0 +1,17 @@
+module Services
+  module Posts
+    # public:
+    #
+    # options: parameter hash
+    #
+    # returns: options hash
+    #
+    class SomeClass
+      include Services::Base
+
+      def call(options = {})
+
+      end
+    end
+  end
+end

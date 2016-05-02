@@ -1,0 +1,20 @@
+# name : Ruby service skeleton
+# --
+
+module Services
+  module Posts
+    # public:
+    #
+    # options: parameter hash
+    #
+    # returns: options hash
+    #
+    class Buh
+      include Services::Base
+
+      def call(options = {})
+
+      end
+    end
+  end
+end
