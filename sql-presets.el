@@ -33,6 +33,10 @@
   (interactive)
   (sql-query 'webapp-vader))
 
+(defun dw-vader()
+  (interactive)
+  (sql-query 'dw-vader))
+
 (defun sds-vader()
   (interactive)
   (sql-query 'sds-vader))
@@ -76,6 +80,10 @@
 (defun sds-odin()
   (interactive)
   (sql-query 'sds-odin))
+
+(defun orthnac-loki()
+  (interactive)
+  (sql-query 'orthnac-loki))
 
 ;; Restore previous window configuration
 (defun sql-quit-session ()

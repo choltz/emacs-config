@@ -95,9 +95,10 @@
 (global-set-key (kbd "s-x") 'smex)
 
 ;; undo tree
-(global-set-key [(ctrl z)]       'undo-tree-undo)
-(global-set-key [(ctrl shift z)] 'undo-tree-redo)
-(global-set-key (kbd "C-c z i")  'undo-tree-visualize)
+;; (global-set-key [(ctrl z)]       'undo-tree-undo)
+;; (global-set-key [(ctrl shift z)] 'undo-tree-redo)
+;; (global-set-key (kbd "C-c z i")  'undo-tree-visualize)
+(global-set-key [(ctrl shift z)]    'redo)
 
 ;; windmove
 (global-set-key  [(meta right)] 'windmove-right)

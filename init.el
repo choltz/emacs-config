@@ -38,10 +38,11 @@
                        helm
                        hydra
                        indent-guide
-                       js2-mode
+                       js3-mode
                        key-chord
                        lua-mode
                        magit
+                       mu4e-alert
                        browse-kill-ring
                        popwin
                        powerline
@@ -49,14 +50,15 @@
                        rainbow-mode
                        color-theme-railscasts
                        rinari
+                       redo+
                        ruby-end
                        ruby-tools
                        rvm
                        smart-mode-line
                        smex
-                       undo-tree
                        web-mode
-                       yaml-mode)
+                       yaml-mode
+                       yasnippet)
 
   "A list of packages to ensure are installed at launch.")
  (dolist (p my-packages)
@@ -81,6 +83,8 @@
 (require 'popwin)
 (require 'indent-guide)
 (require 'color-theme-railscasts)
+(require 'redo+)
+(require 'yasnippet)
 
 ;;
 ;; LOAD CONFIGURATION FILES
@@ -99,6 +103,7 @@
 
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")
+(mu4e)
 ;;(find-file "~/docs/*^ scratch-perm")
 ;;(find-file "~/docs/*^ schedule")
 ;(toggle-frame-fullscreen)
