@@ -48,6 +48,9 @@
 (define-key dired-mode-map "j" 'dired-next-line)
 (define-key dired-mode-map "k" 'dired-previous-line)
 
+;; dumb-jump
+(global-set-key [(meta .)] 'dumb-jump-go)
+
 ;; file operations
 (global-set-key (kbd "C-c f c")  'ispell-word)
 (global-set-key (kbd "C-c f t")    '(lambda()

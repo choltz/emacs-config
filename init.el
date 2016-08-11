@@ -29,6 +29,7 @@
                        dired+
                        dired-rainbow
                        dockerfile-mode
+                       dumb-jump
                        expand-region
                        fill-column-indicator
                        fiplr
