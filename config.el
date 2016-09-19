@@ -29,6 +29,10 @@
 (setq vc-follow-symlinks t)
 (setq create-lockfiles nil)
 
+(require 'saveplace)
+(setq-default save-place t)
+;; (save-place-mode) ; for emacs 25.1
+
 ;; Silence warning when processes are active
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
   (flet ((process-list ())) ad-do-it))
