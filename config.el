@@ -54,6 +54,7 @@
 ;; (golden-ratio-mode t)
 ;; miscellaneious behavior settings
 (setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 (setq kill-do-not-save-duplicates t)
 (setq delete-by-moving-to-trash t)
 (setq tags-revert-without-query 1)
