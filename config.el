@@ -188,7 +188,7 @@
 (setq auto-mode-alist (cons '("\\.rhtml$"      . web-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rjs$"        . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.js$"         . js3-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.scss$"       . css-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.scss$"       . scss-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.yml$"        . yaml-mode) auto-mode-alist))
 
 ;;
