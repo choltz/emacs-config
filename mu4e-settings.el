@@ -37,9 +37,9 @@
 
 ;; Message display settings
 (setq mu4e-view-prefer-html t)
-;;(setq mu4e-html2text-command "w3m -dump -T text/html")
+(setq mu4e-html2text-command "w3m -dump -T text/html")
 (require 'mu4e-contrib)
-(setq mu4e-html2text-command 'mu4e-shr2text)
+; (setq mu4e-html2text-command 'mu4e-shr2text)
 
 (setq mu4e-view-show-images t)
 (when (fboundp 'imagemagick-register-types) (imagemagick-register-types))
