@@ -29,6 +29,8 @@
                        dired-rainbow
                        dockerfile-mode
                        dumb-jump
+                       elfeed
+                       elfeed-goodies
                        expand-region
                        fill-column-indicator
                        fiplr
