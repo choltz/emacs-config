@@ -29,6 +29,10 @@
 (setq vc-follow-symlinks t)
 (setq create-lockfiles nil)
 
+(require 'saveplace)
+(setq-default save-place t)
+;; (save-place-mode) ; for emacs 25.1
+
 ;; Silence warning when processes are active
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
   (flet ((process-list ())) ad-do-it))
@@ -189,7 +193,7 @@
 (setq auto-mode-alist (cons '("\\.rhtml$"      . web-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rjs$"        . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.js$"         . js3-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.scss$"       . css-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.scss$"       . scss-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.yml$"        . yaml-mode) auto-mode-alist))
 
 ;;

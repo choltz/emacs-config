@@ -6,9 +6,7 @@
 ;;
 (require 'package)
 (add-to-list 'load-path "~/src/emacs-config")
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa"     . "http://melpa.org/packages/"))
-;; (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 
 (add-to-list 'load-path "/home/choltz/src/vendor/mu/mu4e")
 
@@ -52,7 +50,6 @@
                        rainbow-delimiters
                        rainbow-mode
                        swiper
-                       color-theme-railscasts
                        rinari
                        redo+
                        ruby-end
