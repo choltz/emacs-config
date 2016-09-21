@@ -94,6 +94,11 @@
 (setq ediff-split-window-function (if (> (frame-width) 150)
                                       'split-window-horizontally
                                     'split-window-vertically))
+;; elixir
+(add-hook 'elixir-mode-hook 'flycheck-mode)
+(eval-after-load 'flycheck
+  '(flycheck-credo-setup))
+   (add-hook 'elixir-mode-hook 'flycheck-mode)
 ;; fill column mode
 (setq fci-rule-column 100)
 (setq fci-rule-color "#444444")

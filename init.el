@@ -10,7 +10,7 @@
 (add-to-list 'package-archives '("melpa"     . "http://melpa.org/packages/"))
 ;; (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+(add-to-list 'load-path "/home/choltz/src/vendor/mu/mu4e")
 
 (package-initialize)
 
@@ -34,6 +34,8 @@
                        fill-column-indicator
                        fiplr
                        flycheck
+                       flycheck-credo
+                       flycheck-elixir
                        git-timemachine
                        golden-ratio
                        helm
@@ -77,6 +79,7 @@
 ;;
 ;; EXPLICIT LOADS AND REQUIRES
 ;;
+(require 'flycheck-elixir)
 (require 'smart-mode-line)
 (require 'mu4e)
 (require 'ruby-mode)
