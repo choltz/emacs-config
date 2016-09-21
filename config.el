@@ -98,6 +98,15 @@
 (setq ediff-split-window-function (if (> (frame-width) 150)
                                       'split-window-horizontally
                                     'split-window-vertically))
+;; elfeed
+(setq elfeed-feeds
+      '("http://feeds.gawker.com/io9/full?format=xml"
+        "https://news.ycombinator.com/rss"))
+(elfeed-goodies/setup)
+(setq elfeed-goodies/entry-pane-position (quote bottom))
+(setq elfeed-goodies/powerline-default-separator nil)
+(setq elfeed-goodies/tag-column-width 0)
+
 ;; elixir
 (add-hook 'elixir-mode-hook 'flycheck-mode)
 (eval-after-load 'flycheck
