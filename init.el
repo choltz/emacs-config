@@ -9,6 +9,7 @@
 (add-to-list 'package-archives '("melpa"     . "http://melpa.org/packages/"))
 
 (add-to-list 'load-path "/home/choltz/src/vendor/mu/mu4e")
+(add-to-list 'load-path "~/src/emacs-config/vendor")
 
 (package-initialize)
 
