@@ -100,8 +100,13 @@
                                     'split-window-vertically))
 ;; elfeed
 (setq elfeed-feeds
-      '("http://feeds.gawker.com/io9/full?format=xml"
-        "https://news.ycombinator.com/rss"))
+      '("http://feeds.gawker.com/io9/vip"
+        "http://feeds.gawker.com/lifehacker/vip"
+        "http://feeds.feedburner.com/HackerNewsFullFeed"
+        "http://feeds2.feedburner.com/slashfilm"
+        "https://www.geeksaresexy.net/feed/"
+        "http://planet.emacsen.org/atom.xml"))
+
 (elfeed-goodies/setup)
 (setq elfeed-goodies/entry-pane-position (quote bottom))
 (setq elfeed-goodies/powerline-default-separator nil)
