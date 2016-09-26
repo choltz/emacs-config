@@ -51,6 +51,12 @@
 ;; dumb-jump
 (global-set-key [(meta .)] 'dumb-jump-go)
 
+;; elfeed
+(define-key elfeed-search-mode-map "j" 'next-line)
+(define-key elfeed-search-mode-map "k" 'previous-line)
+(define-key elfeed-show-mode-map "j" 'elfeed-goodies/split-show-next)
+(define-key elfeed-show-mode-map "k" 'elfeed-goodies/split-show-prev)
+
 ;; file operations
 (global-set-key (kbd "C-c f c")  'ispell-word)
 (global-set-key (kbd "C-c f t")    '(lambda()
