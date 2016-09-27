@@ -61,10 +61,10 @@
 (global-set-key (kbd "C-c f c")  'ispell-word)
 (global-set-key (kbd "C-c f t")    '(lambda()
                                       (interactive)
-                                      (find-file "~/docs/*^ scratch-perm")))
+                                      (find-file "~/shared/*^ scratch-perm")))
 (global-set-key (kbd "C-c f s")    '(lambda()
                                       (interactive)
-                                      (find-file "~/docs/*^ schedule")))
+                                      (find-file "~/shared/*^ schedule")))
 
 
 ;; Magit / source control
