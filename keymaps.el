@@ -37,6 +37,7 @@
 ;; custom
 (global-set-key (kbd "C-c h d")      'duplicate-line)
 (global-set-key (kbd "C-c h f")      'ffap)
+(global-set-key (kbd "C-c h c")      'ispell-word)
 
 ;; dired
 (define-key dired-mode-map "j" 'dired-next-line)
@@ -52,7 +53,6 @@
 (define-key elfeed-show-mode-map "k" 'elfeed-goodies/split-show-prev)
 
 ;; file operations
-(global-set-key (kbd "C-c f c")  'ispell-word)
 (global-set-key (kbd "C-c f t")    '(lambda()
                                       (interactive)
                                       (find-file "~/shared/*^ scratch-perm")))
