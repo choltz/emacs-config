@@ -38,12 +38,6 @@
 (global-set-key (kbd "C-c h d")      'duplicate-line)
 (global-set-key (kbd "C-c h f")      'ffap)
 
-;; database
-(global-set-key (kbd "C-c d i")  'mysql-tatango)
-(global-set-key (kbd "C-c d t")  'mysql-tatango)
-(global-set-key (kbd "C-c d a")  'mysql-albatross)
-(global-set-key (kbd "C-c d p")  'psql-tatango)
-
 ;; dired
 (define-key dired-mode-map "j" 'dired-next-line)
 (define-key dired-mode-map "k" 'dired-previous-line)
