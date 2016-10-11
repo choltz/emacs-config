@@ -93,7 +93,7 @@
 ;(define-key recentf-mode-map "k" 'previous-line)
 
 ;; ruby
-;;(define-key ruby-mode-map [f2]   'occur-function-list)
+(define-key ruby-mode-map [f2]   'occur-function-list)
 
 ;; Smex
 (global-set-key (kbd "M-X") 'smex)
