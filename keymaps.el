@@ -12,7 +12,7 @@
 (global-set-key (kbd "C-c k")    '(lambda() (interactive) (kill-buffer (buffer-name(current-buffer)))))
 (global-set-key "\M- "           'er/expand-region)
 (global-set-key (kbd "M-g M-g")  'goto-line-and-center)
-(global-set-key (kbd "C-<f12>")  'toggle-frame-fullscreen)
+(global-set-key (kbd "C-<f12>")  'toggle-frame-fullsceren)
 ;; (global-set-key [f5]             'search-content)
 (global-set-key [f5]             'ag-project)
 (global-set-key [f3]             'fiplr-find-file)
@@ -65,6 +65,9 @@
 (global-set-key (kbd "C-c f s")    '(lambda()
                                       (interactive)
                                       (find-file "~/shared/*^ schedule")))
+(global-set-key (kbd "C-c f l")    '(lambda()
+                                      (interactive)
+                                      (find-file "~/shared/*^ log")))
 
 
 ;; Magit / source control
@@ -128,7 +131,6 @@
 
 ;; (global-set-key "\M-[1;2C"    'right-char)      ; Ctrl+right   => forward word
 ;; (global-set-key "\M-[1;2D"    'backward-word)     ; Ctrl+left    => backward word
-
 ;; (global-set-key "\M-[1;2C"    'buh)      ; Ctrl+right   => forward word
 
 (global-set-key
