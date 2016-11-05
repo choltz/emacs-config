@@ -17,6 +17,8 @@
 (global-set-key [f5]             'ag-project)
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
+(global-set-key [(XF86Forward)]  'nil)
+(global-set-key [(XF86Back)]     'nil)
 (global-set-key (kbd "C-X F")    'find-file)
 (global-set-key (kbd "C-x |")    'split-window-right)
 (global-set-key (kbd "C-x \\")   'split-window-right)
