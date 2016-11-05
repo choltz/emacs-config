@@ -105,7 +105,11 @@
         "http://feeds.feedburner.com/HackerNewsFullFeed"
         "http://feeds2.feedburner.com/slashfilm"
         "https://www.geeksaresexy.net/feed/"
-        "http://planet.emacsen.org/atom.xml"))
+        "http://planet.emacsen.org/atom.xml"
+        "http://www.computerworld.com/index.rss"
+        "https://www.engadget.com/rss.xml"
+        "http://feeds.gawker.com/gizmodo/full"
+        "http://feeds.feedburner.com/TechCrunch/"))
 
 (elfeed-goodies/setup)
 (setq elfeed-goodies/entry-pane-position (quote bottom))
