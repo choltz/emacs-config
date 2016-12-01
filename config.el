@@ -21,6 +21,7 @@
 (popwin-mode 1)
 (global-auto-complete-mode t) ; only dev modes?
 (scroll-bar-mode 0)
+(save-place-mode)
 
 (setq-default truncate-lines t)
 (fset 'yes-or-no-p 'y-or-n-p) ; stop forcing me to spell out "yes"
@@ -55,6 +56,7 @@
 ;; (golden-ratio-mode t)
 ;; miscellaneious behavior settings
 (setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 (setq kill-do-not-save-duplicates t)
 (setq delete-by-moving-to-trash t)
 (setq tags-revert-without-query 1)
@@ -72,48 +74,83 @@
 (add-to-list 'same-window-regexps "grep") ; make sure grep calls happen in the current window
 (setq pop-up-windows nil)
 (setq minibuffer-prompt-properties (quote (read-only t point-entered minibuffer-avoid-prompt face minibuffer-prompt))) ;; don't let the cursor go into minibuffer prompt
-;; (setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome")
-(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "chromium-browser")
+(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome")
+;; (setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "chromium-browser")
 
 ;; ag
 (setq ag-reuse-window t)
+
 ;; autocomplete
 (setq ac-comphist-file  "~/src/emacs-config/ac-comphist.dat")
 (setq ac-use-quick-help t)
 (setq ac-fuzzy-complete t)
 (add-to-list 'ac-modes 'web-mode)
+
 ;; bm
 (setq bm-highlight-style 'bm-highlight-only-line)
+
 ;; cua
 (setq cua-keep-region-after-copy t)
+
 ;; css mode
 (setq css-indent-offset 2)
+
 ;; dired
 (setq dired-isearch-filenames t)
 (toggle-diredp-find-file-reuse-dir 1)
 (setq dired-listing-switches "-alh --group-directories-first")
+
 ;; ediff - don't spawn a new frame
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
-; (setq ediff-split-window-function 'split-window-horizontally)
+;; (setq ediff-split-window-function 'split-window-horizontally)
 (setq ediff-split-window-function (if (> (frame-width) 150)
                                       'split-window-horizontally
                                     'split-window-vertically))
+;; elfeed
+(setq elfeed-feeds
+      '("http://feeds.gawker.com/io9/vip"
+        "http://feeds.gawker.com/lifehacker/vip"
+        "http://feeds.feedburner.com/HackerNewsFullFeed"
+        "http://feeds2.feedburner.com/slashfilm"
+        "https://www.geeksaresexy.net/feed/"
+        "http://planet.emacsen.org/atom.xml"
+        "http://www.computerworld.com/index.rss"
+        "https://www.engadget.com/rss.xml"
+        "http://feeds.gawker.com/gizmodo/full"
+        "http://feeds.feedburner.com/TechCrunch/"))
+
+(elfeed-goodies/setup)
+(setq elfeed-goodies/entry-pane-position (quote bottom))
+(setq elfeed-goodies/powerline-default-separator nil)
+(setq elfeed-goodies/tag-column-width 0)
+
+;; elixir
+(add-hook 'elixir-mode-hook 'flycheck-mode)
+(eval-after-load 'flycheck
+  '(flycheck-credo-setup))
+   (add-hook 'elixir-mode-hook 'flycheck-mode)
+
 ;; fill column mode
 (setq fci-rule-column 100)
 (setq fci-rule-color "#444444")
 (setq fci-rule-use-dashes t)
 (setq fci-dash-pattern .3)
 (setq fci-always-use-textual-rule nil)
+
 ;; ido
 (setq ido-enable-flex-matching t)
 (setq ido-auto-merge-inhibit-characters-regexp ".") ; don't change directories
 (setq ido-create-new-buffer 'always)
 (setq ido-use-faces t)
+(setq ido-use-virtual-buffers t)
+
 ;; indent guide mode
 (setq indent-guide-recursive nil)
+
 ;; js2-mode
 (setq js2-basic-offset 2)
 (setq js2-cleanup-whitespace t)
+
 ;; js3-mode
 (setq js3-basic-offset 2)
 (setq js3-cleanup-whitespace t)
@@ -144,8 +181,10 @@
 (setq magit-diff-options '("-w"))
 (setq magit-status-buffer-switch-function 'switch-to-buffer) ; don't split the window
 (setq magit-auto-revert-mode nil)
+
 ;; ruby
 (setq ruby-insert-encoding-magic-comment nil)
+
 ;; Scrolling and mouse
 (setq redisplay-dont-pause t
       scroll-margin 15
@@ -154,6 +193,7 @@
       scroll-preserve-screen-position 1)
 (setq mouse-wheel-follow-mouse 't)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+
 ;; save minibuffer history
 (setq savehist-file (concat user-emacs-directory "savehist"))
 (savehist-mode 1)
@@ -162,18 +202,23 @@
       '(kill-ring
         search-ring
         regexp-search-ring))
+
 ;; scss
 (setq scss-compile-at-save nil)
+
 ;; spell check
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
       ispell-extra-args '("--sug-mode=ultra"))
+
 ;; tramp
 (setq tramp-default-method "ssh")
+
 ;; web-mode
 (setq web-mode-enable-current-element-highlight nil)
 (setq web-mode-ac-sources-alist
       '(("css" . (ac-source-css-property))
         ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+
 ;; yasnippet
 (setq yas-snippet-dirs (append yas-snippet-dirs
                                '("~/src/emacs-config/snippets")))
@@ -188,7 +233,7 @@
 (setq auto-mode-alist (cons '("\\.rhtml$"      . web-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rjs$"        . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.js$"         . js3-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.scss$"       . css-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.scss$"       . scss-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.yml$"        . yaml-mode) auto-mode-alist))
 
 ;;

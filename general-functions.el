@@ -100,3 +100,12 @@ user."
 (defun insert-initials-and-timestamp()
   (interactive)
   (insert (concat "CDH - " (format-time-string "%Y-%m-%d" (current-time)) " - ")))
+
+
+;; Override elfeed show function to open content in eww
+(defun elfeed-show-visit (&optional use-generic-p)
+  (interactive "P")
+  (let ((link (elfeed-entry-link elfeed-show-entry)))
+    (when link
+      (message "Sent to browser: %s" link)
+      (eww link))))

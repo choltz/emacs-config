@@ -60,15 +60,20 @@
           '(lambda ()
              (ruby-end-mode)
              (ruby-tools-mode)
-             (indent-guide-mode)
-             (rainbow-delimiters-mode)
-             ;; (add-to-list 'ac-ignores "end")
-             ;; (make-local-variable 'ac-ignores)
-             (fci-mode)
+             ;; (indent-guide-mode)
+             ;; (fci-mode)
              (flycheck-mode)
-             (define-key ruby-mode-map (kbd "SPC") 'ruby-method-space-replace)
              (rvm-activate-corresponding-ruby)
              ))
+
+(add-hook 'elixir-mode-hook
+          `(lambda()
+             (set (make-variable-buffer-local 'ruby-end-expand-keywords-before-re)
+                  "\\(?:^\\|\\s-+\\)\\(?:do\\)")
+             (set (make-variable-buffer-local 'ruby-end-check-statement-modifiers) nil)
+             (ruby-end-mode +1)
+             (indent-guide-mode)
+             (flycheck-mode)))
 
 
 ;; sql
@@ -103,3 +108,13 @@
                    '(("erb"  . (("beg" "end")))))
              (auto-complete-mode)
              ))
+
+
+;;
+;; Not really a hook but sort of simulates one. Electric pair mode is a
+;; global-only mode. This includes the minibuffer... which is very annoying
+;;
+(defvar my-electic-pair-modes '(ruby-mode web-mode js3-mode scss-mode))
+(defun my-inhibit-electric-pair-mode (char)
+  (not (member major-mode my-electic-pair-modes)))
+(setq electric-pair-inhibit-predicate 'my-inhibit-electric-pair-mode)

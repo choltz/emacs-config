@@ -12,11 +12,13 @@
 (global-set-key (kbd "C-c k")    '(lambda() (interactive) (kill-buffer (buffer-name(current-buffer)))))
 (global-set-key "\M- "           'er/expand-region)
 (global-set-key (kbd "M-g M-g")  'goto-line-and-center)
-(global-set-key (kbd "C-<f12>")  'toggle-frame-fullscreen)
+(global-set-key (kbd "C-<f12>")  'toggle-frame-fullsceren)
 ;; (global-set-key [f5]             'search-content)
 (global-set-key [f5]             'ag-project)
 (global-set-key [f3]             'fiplr-find-file)
 (global-set-key (kbd "C-x C-z")  'nil) ; disable irritating minimize behavior
+(global-set-key [(XF86Forward)]  'nil)
+(global-set-key [(XF86Back)]     'nil)
 (global-set-key (kbd "C-X F")    'find-file)
 (global-set-key (kbd "C-x |")    'split-window-right)
 (global-set-key (kbd "C-x \\")   'split-window-right)
@@ -37,25 +39,31 @@
 ;; custom
 (global-set-key (kbd "C-c h d")      'duplicate-line)
 (global-set-key (kbd "C-c h f")      'ffap)
-
-;; database
-(global-set-key (kbd "C-c d i")  'mysql-tatango)
-(global-set-key (kbd "C-c d t")  'mysql-tatango)
-(global-set-key (kbd "C-c d a")  'mysql-albatross)
-(global-set-key (kbd "C-c d p")  'psql-tatango)
+(global-set-key (kbd "C-c h c")      'ispell-word)
 
 ;; dired
 (define-key dired-mode-map "j" 'dired-next-line)
 (define-key dired-mode-map "k" 'dired-previous-line)
 
+;; dumb-jump
+(global-set-key [(meta .)] 'dumb-jump-go)
+
+;; elfeed
+(define-key elfeed-search-mode-map "j" 'next-line)
+(define-key elfeed-search-mode-map "k" 'previous-line)
+(define-key elfeed-show-mode-map "j" 'elfeed-goodies/split-show-next)
+(define-key elfeed-show-mode-map "k" 'elfeed-goodies/split-show-prev)
+
 ;; file operations
-(global-set-key (kbd "C-c f c")  'ispell-word)
 (global-set-key (kbd "C-c f t")    '(lambda()
                                       (interactive)
-                                      (find-file "~/docs/*^ scratch-perm")))
+                                      (find-file "~/shared/*^ scratch-perm")))
 (global-set-key (kbd "C-c f s")    '(lambda()
                                       (interactive)
-                                      (find-file "~/docs/*^ schedule")))
+                                      (find-file "~/shared/*^ schedule")))
+(global-set-key (kbd "C-c f l")    '(lambda()
+                                      (interactive)
+                                      (find-file "~/shared/*^ log")))
 
 
 ;; Magit / source control
@@ -87,7 +95,7 @@
 ;(define-key recentf-mode-map "k" 'previous-line)
 
 ;; ruby
-;;(define-key ruby-mode-map [f2]   'occur-function-list)
+(define-key ruby-mode-map [f2]   'occur-function-list)
 
 ;; Smex
 (global-set-key (kbd "M-X") 'smex)
@@ -119,7 +127,6 @@
 
 ;; (global-set-key "\M-[1;2C"    'right-char)      ; Ctrl+right   => forward word
 ;; (global-set-key "\M-[1;2D"    'backward-word)     ; Ctrl+left    => backward word
-
 ;; (global-set-key "\M-[1;2C"    'buh)      ; Ctrl+right   => forward word
 
 (global-set-key
