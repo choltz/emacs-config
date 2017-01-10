@@ -20,7 +20,7 @@
 
 (defvar my-packages '( ack
                        ag
-                       auto-complete
+                       ;; auto-complete
                        bm
                        calfw
                        centered-window-mode
@@ -75,7 +75,7 @@
 (autoload 'electric-occur            "electric-occur-mode/electric-occur-mode"       t)
 (autoload 'search-content            "search-content"                                t)
 (autoload 'ffap-string-at-point      "ffap"                                          t)
- 
+
 ;;
 ;; EXPLICIT LOADS AND REQUIRES
 ;;
@@ -90,7 +90,7 @@
 (require 'color-theme-railscasts)
 (require 'redo+)
 (require 'yasnippet)
- 
+
 ;;
 ;; LOAD CONFIGURATION FILES
 ;;
@@ -105,7 +105,7 @@
 (load "keymaps")
 (load "mu4e-settings")
 (load "sql-presets.el")
- 
+
 ;; load up the scratch perm file
 (kill-buffer "*scratch*")
 (mu4e)

@@ -85,7 +85,7 @@
                            (define-key sql-mode-map  [(ctrl f4)] 'sql-send-region-better)
                            (sql-set-product 'mysql)
                            (rainbow-delimiters-mode)
-                           (auto-complete-mode)
+                           ;; (auto-complete-mode)
                            (sql-highlight-mysql-keywords)))
 
 ;; text mode
@@ -106,7 +106,7 @@
 
              (setq web-mode-extra-auto-pairs
                    '(("erb"  . (("beg" "end")))))
-             (auto-complete-mode)
+             ;; (auto-complete-mode)
              ))
 
 

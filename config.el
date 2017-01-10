@@ -19,7 +19,7 @@
 ;;(global-rinari-mode) ; this should load for ruby files only
 (ruby-tools-mode t)
 (popwin-mode 1)
-(global-auto-complete-mode t) ; only dev modes?
+;; (global-auto-complete-mode t) ; only dev modes?
 (scroll-bar-mode 0)
 (save-place-mode)
 
@@ -76,10 +76,10 @@
 (setq ag-reuse-window t)
 
 ;; autocomplete
-(setq ac-comphist-file  "~/src/emacs-config/ac-comphist.dat")
-(setq ac-use-quick-help t)
-(setq ac-fuzzy-complete t)
-(add-to-list 'ac-modes 'web-mode)
+;; (setq ac-comphist-file  "~/src/emacs-config/ac-comphist.dat")
+;; (setq ac-use-quick-help t)
+;; (setq ac-fuzzy-complete t)
+;; (add-to-list 'ac-modes 'web-mode)
 
 ;; bm
 (setq bm-highlight-style 'bm-highlight-only-line)
@@ -89,6 +89,10 @@
 
 ;; css mode
 (setq css-indent-offset 2)
+
+;; company mode
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-idle-delay 0.1)
 
 ;; dired
 (setq dired-isearch-filenames t)
@@ -156,7 +160,6 @@
 (setq js3-strict-missing-semi-warning t)
 
 ;; magit settings
-
 (setq magit-repo-dirs (quote ("~/src/tatango"
                               "~/src/deploy"
                               "~/src/albatross"
@@ -176,6 +179,11 @@
 (setq magit-diff-options '("-w"))
 (setq magit-status-buffer-switch-function 'switch-to-buffer) ; don't split the window
 (setq magit-auto-revert-mode nil)
+
+;; recentf
+(setq recentf-max-saved-items 100)
+(setq recentf-max-menu-items 100)
+(run-at-time nil (* 5 60) 'recentf-save-list) ; save recent list every 5 mins, in case a crash wipes it out
 
 ;; ruby
 (setq ruby-insert-encoding-magic-comment nil)
