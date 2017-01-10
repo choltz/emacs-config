@@ -4,6 +4,17 @@
 (custom-set-faces
  '(bm-face ((t (:background "#492F03" :foreground "#999999")))))
 
+;; company mode
+(let ((bg (face-attribute 'default :background)))
+  (custom-set-faces
+   `(company-preview           ((t (:inherit font-lock-constant-face))))
+   '(company-preview-common    ((t (:inherit company-preview))))
+   `(company-tooltip           ((t (:inherit default :background ,(color-lighten-name bg 2)))))
+   `(company-scrollbar-bg      ((t (:background ,(color-lighten-name bg 10)))))
+   `(company-scrollbar-fg      ((t (:background ,(color-lighten-name bg 5)))))
+   `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+   `(company-tooltip-common    ((t (:inherit font-lock-constant-face))))))
+
 ;; change magit diff colors
 ;; (eval-after-load 'magit
 ;;   '(progn
