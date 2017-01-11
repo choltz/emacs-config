@@ -1,4 +1,4 @@
-(set-face-background 'show-paren-match-face "#666666")
+; (set-face-background 'show-paren-match-face "#666666")
 
 ;; bm mode
 (custom-set-faces
