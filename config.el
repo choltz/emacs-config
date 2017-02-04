@@ -136,6 +136,10 @@
 (setq fci-dash-pattern .3)
 (setq fci-always-use-textual-rule nil)
 
+;; fiplr
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "tmp" "log"))
+                            (files ("*.jpg" "*.png" "*.zip" "*~"))))
+
 ;; ido
 (setq ido-enable-flex-matching t)
 (setq ido-auto-merge-inhibit-characters-regexp ".") ; don't change directories
