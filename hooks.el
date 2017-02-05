@@ -18,14 +18,14 @@
 ;; js2 mode
 (add-hook 'js2-mode-hook
           '(lambda ()
-             (indent-guide-mode)
+             (highlight-indent-guides-mode)
              (rainbow-delimiters-mode)
              (fci-mode)))
 
 ;; js2 mode
 (add-hook 'js3-mode-hook
           '(lambda ()
-             (indent-guide-mode)
+             (highlight-indent-guides-mode)
              (rainbow-delimiters-mode)
              (fci-mode)))
 
@@ -60,10 +60,10 @@
           '(lambda ()
              (ruby-end-mode)
              (ruby-tools-mode)
-             ;; (indent-guide-mode)
-             ;; (fci-mode)
+             (highlight-indent-guides-mode)
              (flycheck-mode)
              (rvm-activate-corresponding-ruby)
+             (fci-mode)
              ))
 
 (add-hook 'elixir-mode-hook

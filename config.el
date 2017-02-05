@@ -140,6 +140,8 @@
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "tmp" "log"))
                             (files ("*.jpg" "*.png" "*.zip" "*~"))))
 
+(setq highlight-indent-guides-method 'character)
+
 ;; ido
 (setq ido-enable-flex-matching t)
 (setq ido-auto-merge-inhibit-characters-regexp ".") ; don't change directories

@@ -40,6 +40,7 @@
                        git-timemachine
                        golden-ratio
                        helm
+                       highlight-indent-guides
                        hydra
                        indent-guide
                        js3-mode
