@@ -11,7 +11,7 @@
 (global-set-key (kbd "C-x k")    'bury-buffer)
 (global-set-key (kbd "C-c k")    '(lambda() (interactive) (kill-buffer (buffer-name(current-buffer)))))
 (global-set-key "\M- "           'er/expand-region)
-(global-set-key (kbd "M-g M-g")  'goto-line-and-center)
+(global-set-key (kbd "M-g M-g")  'goto-linbvbve-and-center)
 (global-set-key (kbd "C-<f12>")  'toggle-frame-fullsceren)
 ;; (global-set-key [f5]             'search-content)
 (global-set-key [f5]             'ag-project)
